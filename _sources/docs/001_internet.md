@@ -11,7 +11,9 @@ kernelspec:
   name: python3
 ---
 
-# Das Internet {cite:ps}`internet2021`
+# Das Internet
+
+Nach {cite:ps}`internet2021`
 
 ## Was ist das Internet?
 
