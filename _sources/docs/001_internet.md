@@ -167,5 +167,5 @@ Sowohl Kriminelle als auch Regierungsspione haben versucht, DNS zu kompromittier
 Ein Standard namens DNSSEC versucht, die DNS-Sicherheit durch Verschlüsselung zu verbessern, aber nur wenige Menschen haben ihn übernommen.
 
 ```{bibliography}
-
+:style: plain
 ```
