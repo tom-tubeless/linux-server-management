@@ -1,0 +1,510 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Das Internet &#8212; Linux Server Management</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "https://github.com/tom-tubeless/linux-server-management");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Linux-Server-Management" href="000_intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/wwg_atom_klecks_black_green.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Linux Server Management</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="000_intro.html">
+   Linux-Server-Management
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Das Internet
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/docs/001_internet.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/001_internet.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/tom-tubeless/linux-server-management"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/tom-tubeless/linux-server-management/issues/new?title=Issue%20on%20page%20%2Fdocs/001_internet.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tom-tubeless/linux-server-management/main?urlpath=lab/tree/book/docs/001_internet.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#was-ist-das-internet">
+   1.1. Was ist das Internet?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wo-ist-das-internet">
+   1.2. Wo ist das Internet?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wer-hat-das-internet-geschaffen">
+   1.3. Wer hat das Internet geschaffen?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wer-leitet-das-internet">
+   1.4. Wer leitet das Internet?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#was-ist-eine-ip-adresse">
+   1.5. Was ist eine IP-Adresse?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#was-ist-ipv6">
+   1.6. Was ist IPv6?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#was-ist-ein-paket">
+   1.7. Was ist ein Paket?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#was-ist-das-world-wide-web">
+   1.8. Was ist das World Wide Web?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#was-ist-ein-webbrowser">
+   1.9. Was ist ein Webbrowser?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#was-ist-ssl">
+   1.10. Was ist SSL?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#was-ist-das-domain-name-system">
+   1.11. Was ist das Domain Name System?
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="das-internet">
+<h1><span class="section-number">1. </span>Das Internet<a class="headerlink" href="#das-internet" title="Permalink to this headline">¶</a></h1>
+<p>Nach <span id="id1">[<a class="reference internal" href="#id3" title="Timothy B. Lee. The internet, explained. \url https://www.vox.com/2014/6/16/18076282/the-internet, 2015. Accessed: 2021-09-14.">1</a>]</span></p>
+<div class="section" id="was-ist-das-internet">
+<h2><span class="section-number">1.1. </span>Was ist das Internet?<a class="headerlink" href="#was-ist-das-internet" title="Permalink to this headline">¶</a></h2>
+<p>Das Internet ist das beliebteste Computernetz der Welt.
+Es begann als akademisches Forschungsprojekt im Jahr 1969 und wurde in den 1990er Jahren zu einem globalen kommerziellen Netz.
+Heute wird es von mehr als 2 Milliarden Menschen auf der ganzen Welt genutzt.</p>
+<p>Das Internet zeichnet sich noch durch seinen dezentralen Charakter aus.
+Keine einzelne Personengruppe besitzt das Internet oder kontrolliert, wer sich mit ihm verbinden kann
+Stattdessen betreiben Tausende von verschiedenen Organisationen ihre eigenen Netze und handeln freiwillige Zusammenschaltungsvereinbarungen aus.</p>
+<p>Die meisten Menschen greifen über einen Webbrowser auf Internetinhalte zu.
+Tatsächlich ist das Web so populär geworden, dass viele Menschen Internet und Web fälschlicherweise als Synonyme betrachten.
+In Wirklichkeit ist das Web jedoch nur eine von vielen Internetanwendungen.
+Andere beliebte Internetanwendungen sind E-Mail und BitTorrent.</p>
+</div>
+<div class="section" id="wo-ist-das-internet">
+<h2><span class="section-number">1.2. </span>Wo ist das Internet?<a class="headerlink" href="#wo-ist-das-internet" title="Permalink to this headline">¶</a></h2>
+<p>Das Internet besteht im Wesentlichen aus drei Teilen:</p>
+<ul class="simple">
+<li><p><strong>Die letzte Meile</strong> ist der Teil des Internets, der die Haushalte und kleinen Unternehmen mit dem Internet verbindet. In Deutschland werden Internetanschlüsse von Privathaushalten etwa durch Vodafone oder die Telekom zur Verfügung gestellt. Sie bieten Telefonleitungen, Kabelfernsehleitungen und immer mehr Glasfaser-Leitungen an. Zur letzten Meile gehören auch die Türme, die den Menschen den Internetzugang über ihr Handy ermöglichen. Drahtlose Internetdienste machen einen großen und wachsenden Anteil an der gesamten Internetnutzung aus. Neu ist schnelles Internet per Satellit.</p></li>
+<li><p><strong>Rechenzentren</strong> sind Räume voller Server, die Benutzerdaten speichern und Online-Anwendungen und -Inhalte <em>hosten</em>. Einige befinden sich im Besitz großer Unternehmen wie Google und Facebook. Andere sind kommerzielle Einrichtungen, die vielen kleineren Websites ihre Dienste anbieten. Rechenzentren verfügen über sehr schnelle Internetverbindungen, so dass sie viele Nutzer gleichzeitig bedienen können. Rechenzentren können überall auf der Welt stehen, befinden sich aber oft in abgelegenen Gebieten, wo Land und Strom billig sind. Google, Facebook und Microsoft haben zum Beispiel große Rechenzentren in Iowa errichtet.</p></li>
+<li><p><strong>Das Backbone</strong> besteht aus Langstreckennetzen - meist aus Glasfaserkabeln -, die Daten zwischen Rechenzentren und Verbrauchern übertragen. Der Backbone-Markt ist hart umkämpft. Backbone-Anbieter verbinden ihre Netze häufig an Internet-Austauschpunkten, die sich in der Regel in Großstädten befinden. Die Präsenz an IEPs macht es für Backbone-Anbieter viel einfacher, ihre Verbindungen zu anderen zu verbessern.</p></li>
+</ul>
+</div>
+<div class="section" id="wer-hat-das-internet-geschaffen">
+<h2><span class="section-number">1.3. </span>Wer hat das Internet geschaffen?<a class="headerlink" href="#wer-hat-das-internet-geschaffen" title="Permalink to this headline">¶</a></h2>
+<p>Das Internet begann als ARPANET, ein akademisches Forschungsnetz, das von der Advanced Research Projects Agency (ARPA, heute DARPA) des Militärs finanziert wurde.
+Das Projekt wurde von Bob Taylor, einem ARPA-Verwalter, geleitet, und das Netz wurde von der Beratungsfirma Bolt, Beranek und Newman aufgebaut.
+Es wurde 1969 in Betrieb genommen.</p>
+<p>1973 begannen die Software-Ingenieure Vint Cerf und Bob Kahn mit der Arbeit an der nächsten Generation von Netzwerkstandards für das ARPANET.
+Diese Standards, die als <em>TCP/IP</em> bekannt wurden, bildeten die Grundlage für das moderne Internet.
+Am 1. Januar 1983 stellte das ARPANET auf die Verwendung von TCP/IP um.</p>
+<p>In den 1980er Jahren verlagerte sich die Finanzierung des Internets vom Militär auf die National Science Foundation.
+Die NSF finanzierte die Langstreckennetze, die von 1981 bis 1994 als Backbone für das Internet dienten.
+Im Jahr 1994 übergab die Clinton-Regierung die Kontrolle über das Internet-Backbone an den privaten Sektor.
+Seitdem wird es privat betrieben und finanziert.</p>
+</div>
+<div class="section" id="wer-leitet-das-internet">
+<h2><span class="section-number">1.4. </span>Wer leitet das Internet?<a class="headerlink" href="#wer-leitet-das-internet" title="Permalink to this headline">¶</a></h2>
+<p>Niemand leitet das Internet.
+Es ist als dezentrales Netz von Netzen organisiert.
+Tausende von Unternehmen, Universitäten, Regierungen und andere Einrichtungen betreiben ihre eigenen Netze und tauschen auf der Grundlage freiwilliger Zusammenschaltungsvereinbarungen Daten untereinander aus.</p>
+<p>Die gemeinsamen technischen Standards, die das Funktionieren des Internets ermöglichen, werden von einer Organisation namens <em>Internet Engineering Task Force</em> verwaltet.
+Die IETF ist eine offene Organisation; es steht jedem frei, an den Sitzungen teilzunehmen, neue Standards vorzuschlagen und Änderungen an bestehenden Standards zu empfehlen.
+Niemand ist verpflichtet, die von der IETF gebilligten Standards zu übernehmen, aber der auf Konsens basierende Entscheidungsfindungsprozess der IETF trägt dazu bei, dass ihre Empfehlungen allgemein von der Internetgemeinschaft angenommen werden.</p>
+<p>Die <em>Internet Corporation for Assigned Names and Numbers</em> (ICANN) wird manchmal als für die Verwaltung des Internets zuständig bezeichnet.
+Wie der Name schon sagt, ist die ICANN für die Verteilung von <em>Domänennamen</em> (wie <a class="reference external" href="http://ww-gym.de">ww-gym.de</a>) und <em>IP-Adressen</em> zuständig.
+Aber die ICANN kontrolliert nicht, wer sich mit dem Internet verbinden kann oder welche Art von Informationen über das Internet gesendet werden können.</p>
+</div>
+<div class="section" id="was-ist-eine-ip-adresse">
+<h2><span class="section-number">1.5. </span>Was ist eine IP-Adresse?<a class="headerlink" href="#was-ist-eine-ip-adresse" title="Permalink to this headline">¶</a></h2>
+<p><em>Internet-Protokoll-Adressen</em> sind Nummern, mit denen sich Computer im Internet gegenseitig identifizieren.
+Die IP-Adresse von <a class="reference external" href="http://ww-gym.de">ww-gym.de</a> lautet zum Beispiel (216.146.46.10).</p>
+<p>Eine Abteilung der ICANN, die so genannte Internet Assigned Numbers Authority, ist für die Verteilung der IP-Adressen zuständig, um sicherzustellen, dass nicht zwei verschiedene Organisationen dieselbe Adresse verwenden.</p>
+</div>
+<div class="section" id="was-ist-ipv6">
+<h2><span class="section-number">1.6. </span>Was ist IPv6?<a class="headerlink" href="#was-ist-ipv6" title="Permalink to this headline">¶</a></h2>
+<p>Der derzeitige Internet-Standard, <em>IPv4</em> genannt, lässt nur etwa 4 Milliarden IP-Adressen zu.
+In den 1970er Jahren galt dies als eine sehr große Zahl, aber heute ist der Vorrat an IPv4-Adressen fast erschöpft.</p>
+<p>Deshalb haben Internet-Ingenieure einen neuen Standard namens <em>IPv6</em> entwickelt.
+IPv6 ermöglicht eine unglaubliche Anzahl eindeutiger Adressen - die genaue Zahl ist 39 Ziffern lang - und stellt sicher, dass der Welt nie wieder die Adressen ausgehen werden.</p>
+<p>Die Umstellung auf IPv6 verlief zunächst langsam.
+Die technischen Arbeiten an der Norm wurden in den 1990er Jahren abgeschlossen, aber die Internet-Gemeinschaft sah sich mit einem ernsthaften Henne-Ei-Problem konfrontiert: Solange die meisten Menschen IPv4 verwendeten, gab es für niemanden einen Anreiz, zu IPv6 zu wechseln.</p>
+<p>Als jedoch die IPv4-Adressen knapp wurden, beschleunigte sich die Einführung von IPv6.
+Der Anteil der Nutzer, die sich über IPv6 mit Google verbinden, stieg von 1 Prozent Anfang 2013 auf 6 Prozent Mitte 2015.</p>
+</div>
+<div class="section" id="was-ist-ein-paket">
+<h2><span class="section-number">1.7. </span>Was ist ein Paket?<a class="headerlink" href="#was-ist-ein-paket" title="Permalink to this headline">¶</a></h2>
+<p>Ein <em>Paket</em> ist die Grundeinheit der über das Internet übertragenen Informationen.
+Durch die Aufteilung von Informationen in kleine, leicht verdauliche Teile kann die Kapazität des Netzes effizienter genutzt werden.</p>
+<p>Ein Paket besteht aus zwei Teilen.
+Der <em>Header</em> enthält Informationen, die dem Paket helfen, sein Ziel zu erreichen.
+Dazu gehören die Länge des Pakets, seine Quelle und sein Ziel sowie ein Prüfsummenwert, mit dem der Empfänger feststellen kann, ob ein Paket während der Übertragung beschädigt wurde.
+Nach dem Header folgen die eigentlichen Daten.
+Ein Paket kann bis zu 64 Kilobyte an Daten enthalten, was ungefähr 20 Seiten Klartext entspricht.</p>
+<p>Wenn bei Internet-Routern eine Überlastung oder andere technische Probleme auftreten, können sie diese durch einfaches Verwerfen der Pakete beheben.
+Es liegt in der Verantwortung des sendenden Computers, zu erkennen, dass ein Paket sein Ziel nicht erreicht hat, und eine weitere Kopie zu senden.
+Dieser Ansatz mag kontraintuitiv erscheinen, aber er vereinfacht die Kerninfrastruktur des Internets und führt zu einer höheren Leistung bei geringeren Kosten.</p>
+</div>
+<div class="section" id="was-ist-das-world-wide-web">
+<h2><span class="section-number">1.8. </span>Was ist das World Wide Web?<a class="headerlink" href="#was-ist-das-world-wide-web" title="Permalink to this headline">¶</a></h2>
+<p>Das World Wide Web ist eine beliebte Methode zur Veröffentlichung von Informationen im Internet.
+Das Web wurde 1991 von Timothy Berners-Lee, einem Computerprogrammierer bei der europäischen Forschungsorganisation CERN, entwickelt.
+Es bot eine leistungsfähigere und benutzerfreundlichere Schnittstelle als andere Internetanwendungen.
+Das Web unterstützte Hyperlinks, die es den Benutzern ermöglichten, mit einem einzigen Klick von einem Dokument zum anderen zu wechseln.</p>
+<p>Im Laufe der Zeit wurde das Web immer ausgefeilter und unterstützte Bilder, Audio, Video und interaktive Inhalte.
+Mitte der 1990er Jahre begannen Unternehmen wie Yahoo und <a class="reference external" href="http://Amazon.com">Amazon.com</a>, auf der Grundlage des Webs profitable Geschäfte zu machen.
+In den 2000er Jahren wurden webbasierte Anwendungen mit vollem Funktionsumfang wie Yahoo Maps und Google Docs entwickelt.</p>
+<p>1994 gründete Berners-Lee das <em>World Wide Web Consortium</em> (W3C) als offizielle Standardisierungsorganisation für das Web.
+Er ist immer noch Direktor des W3C und beaufsichtigt die Entwicklung von Webstandards.
+Das Web ist jedoch eine offene Plattform, und das W3C kann niemanden dazu zwingen, seine Empfehlungen zu übernehmen.
+In der Praxis sind die Organisationen mit dem größten Einfluss auf das Web Microsoft, Google, Apple und Mozilla, die Unternehmen, die die führenden Webbrowser herstellen.
+Alle von diesen vier Unternehmen übernommenen Technologien werden de facto zu Webstandards.</p>
+<p>Das Web ist so populär geworden, dass viele Menschen es heute als Synonym für das Internet selbst betrachten.
+Aber technisch gesehen ist das Web nur eine von vielen Internetanwendungen.
+Zu den anderen Anwendungen gehören E-Mail und BitTorrent.</p>
+</div>
+<div class="section" id="was-ist-ein-webbrowser">
+<h2><span class="section-number">1.9. </span>Was ist ein Webbrowser?<a class="headerlink" href="#was-ist-ein-webbrowser" title="Permalink to this headline">¶</a></h2>
+<p>Ein Webbrowser ist ein Computerprogramm, mit dem Benutzer Websites herunterladen und anzeigen können.
+Webbrowser gibt es für Desktop-Computer, Tablets und Mobiltelefone.</p>
+<p>Der erste weit verbreitete Browser war Mosaic, der von Forschern an der Universität von Illinois entwickelt wurde.
+Das Mosaic-Team zog nach Kalifornien und gründete Netscape, das 1994 den ersten kommerziell erfolgreichen Webbrowser entwickelte.</p>
+<p>Die Popularität von Netscape wurde bald von Microsofts Internet Explorer in den Schatten gestellt, aber aus einer Open-Source-Version des Netscape-Browsers wurde der moderne Firefox-Browser.
+Apple veröffentlichte 2003 seinen Safari-Browser, und Google brachte 2008 einen Browser namens Chrome heraus. Im Jahr 2015 war Chrome der beliebteste Webbrowser mit einem Marktanteil von rund 50 Prozent.
+Internet Explorer (heute als Edge mit Chrome-Engine), Firefox und Safari hatten ebenfalls einen beträchtlichen Marktanteil.</p>
+</div>
+<div class="section" id="was-ist-ssl">
+<h2><span class="section-number">1.10. </span>Was ist SSL?<a class="headerlink" href="#was-ist-ssl" title="Permalink to this headline">¶</a></h2>
+<p><em>SSL</em>, die Abkürzung für <em>Secure Sockets Layer</em>, ist eine Familie von Verschlüsselungstechnologien, die es Webnutzern ermöglicht, die Privatsphäre der über das Internet übertragenen Informationen zu schützen.</p>
+<p>Wenn Sie eine sichere Website wie <a class="reference external" href="http://Gmail.com">Gmail.com</a> besuchen, sehen Sie neben der URL ein Schloss, das anzeigt, dass Ihre Kommunikation mit der Website verschlüsselt ist.
+Dieses Schloss soll signalisieren, dass Dritte nicht in der Lage sind, die von Ihnen gesendeten oder empfangenen Informationen zu lesen. Unter der Haube erreicht SSL dies, indem es Ihre Daten in eine verschlüsselte Nachricht umwandelt, die nur der Empfänger entziffern kann.
+Wenn eine böswillige Partei das Gespräch abhört, sieht sie nur eine scheinbar zufällige Zeichenfolge, nicht aber den Inhalt Ihrer E-Mails, Facebook-Posts, Kreditkartennummern oder andere private Informationen.</p>
+<p>SSL wurde 1994 von Netscape eingeführt.
+In den ersten Jahren wurde es nur auf einigen wenigen Arten von Websites verwendet, z. B. auf Online-Banking-Sites.
+In den frühen 2010er Jahren verwendeten Google, Yahoo und Facebook SSL-Verschlüsselung für ihre Websites und Online-Dienste.
+In jüngster Zeit gibt es eine Bewegung hin zu einer allgemeinen Verwendung von SSL.
+Im Jahr 2015 kündigte Mozilla an, dass künftige Versionen des Firefox-Browsers das Fehlen einer SSL-Verschlüsselung als Sicherheitsmangel behandeln würden, um alle Websites zu einem Upgrade zu bewegen.
+Google hat mit Chrome den gleichen Schritt getan.</p>
+</div>
+<div class="section" id="was-ist-das-domain-name-system">
+<h2><span class="section-number">1.11. </span>Was ist das Domain Name System?<a class="headerlink" href="#was-ist-das-domain-name-system" title="Permalink to this headline">¶</a></h2>
+<p>Das <em>Domain Name System</em> (DNS) ist der Grund, warum Sie auf die Schulwebsite zugreifen können, indem Sie <a class="reference external" href="http://ww-gym.de">ww-gym.de</a> in Ihren Browser eingeben und nicht eine schwer zu merkende numerische Adresse wie (159.69.35.123).</p>
+<p>Das System ist hierarchisch aufgebaut.
+Die .de-Domäne (Top level Domain) wird zum Beispiel von einem Unternehmen namens Verisign verwaltet.
+Verisign weist Domänen wie <a class="reference external" href="http://google.com">google.com</a> und <a class="reference external" href="http://ww-gym.de">ww-gym.de</a> zu.
+Die Inhaber dieser <em>Second-Level-Domains</em> können wiederum <em>Sub-Domains</em> wie <a class="reference external" href="https://mail.ww-gym.de">mail.ww-gym.de</a> und <a class="reference external" href="https://moodle.ww-gym.de">moodle.ww-gym.de</a> einrichten.</p>
+<p>Da beliebte Websites Domänennamen verwenden, um sich in der Öffentlichkeit zu identifizieren, ist die Sicherheit des DNS zu einem zunehmenden Problem geworden.
+Sowohl Kriminelle als auch Regierungsspione haben versucht, DNS zu kompromittieren, um sich als beliebte Websites wie <a class="reference external" href="http://facebook.com">facebook.com</a> und <a class="reference external" href="http://gmail.com">gmail.com</a> auszugeben und deren private Kommunikation abzufangen.
+Ein Standard namens DNSSEC versucht, die DNS-Sicherheit durch Verschlüsselung zu verbessern, aber nur wenige Menschen haben ihn übernommen.</p>
+<p id="id2"><dl class="citation">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Timothy B. Lee. The internet, explained. <a class="reference external" href="https://www.vox.com/2014/6/16/18076282/the-internet">https://www.vox.com/2014/6/16/18076282/the-internet</a>, 2015. Accessed: 2021-09-14.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "tom-tubeless/linux-server-management",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="000_intro.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Linux-Server-Management</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Lutz Tomala<br/>
+        
+            &copy; Copyright MIT License Copyright (c) 2021 Lutz Tomala.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

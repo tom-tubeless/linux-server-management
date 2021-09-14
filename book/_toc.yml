@@ -6,6 +6,6 @@ root: docs/000_intro
 options:
   numbered: 2
 chapters:
-  - file: docs/001_uebersicht
+  - file: docs/001_internet
   # sections:
   #   - file: docs/101_hello_world

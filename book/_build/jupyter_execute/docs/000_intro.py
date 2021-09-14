@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Bio am WWG
+# # Linux-Server-Management
 # 
-# Unterrichtsplanung, -inhalte und -materialien für das Fach Biologie am Wim-Wenders-Gymnasium Düsseldorf.
+# Unterrichtsplanung, -inhalte und -materialien für Linux-Server-Management am Wim-Wenders-Gymnasium Düsseldorf.

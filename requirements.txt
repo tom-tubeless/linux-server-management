@@ -10,3 +10,4 @@ openpyxl
 # cookiecutter
 # pytest
 black
+sphinxcontrib-bibtex
