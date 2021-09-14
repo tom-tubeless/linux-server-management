@@ -1,0 +1,12 @@
+jupyter-book
+ghp-import
+sphinx-thebe
+pandas
+plotly
+wheel
+openpyxl
+# matplotlib
+# numpy
+# cookiecutter
+# pytest
+black

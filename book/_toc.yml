@@ -1,0 +1,11 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: docs/000_intro
+options:
+  numbered: 2
+chapters:
+  - file: docs/001_uebersicht
+  # sections:
+  #   - file: docs/101_hello_world
