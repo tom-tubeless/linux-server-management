@@ -11,11 +11,9 @@ kernelspec:
   name: python3
 ---
 
-# Das Internet {cite:ps}`perez2011python`
+# Das Internet {cite:ps}`internet2021`
 
 ## Was ist das Internet?
-
-Here is my nifty citation {cite}`perez2011python`.
 
 Das Internet ist das beliebteste Computernetz der Welt.
 Es begann als akademisches Forschungsprojekt im Jahr 1969 und wurde in den 1990er Jahren zu einem globalen kommerziellen Netz.
