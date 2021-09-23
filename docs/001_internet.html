@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.e2363ea40746bee74734a24ffefccd78.css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,7 +33,7 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -74,10 +74,10 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -85,6 +85,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Netzwerke" href="002_networking.html" />
     <link rel="prev" title="Linux-Server-Management" href="000_intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -104,6 +105,10 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../_static/wwg_atom_klecks_black_green.png" class="logo" alt="logo">
       
       
@@ -112,7 +117,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -126,6 +131,11 @@ commentsRunWhenDOMLoaded(addUtterances);
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    1. Das Internet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="002_networking.html">
+   2. Netzwerke
   </a>
  </li>
 </ul>
@@ -153,8 +163,8 @@ commentsRunWhenDOMLoaded(addUtterances);
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
+                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -162,21 +172,21 @@ commentsRunWhenDOMLoaded(addUtterances);
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         <a class="dropdown-buttons"
             href="../_sources/docs/001_internet.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Notebook-Datei herunterladen" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/docs/001_internet.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -189,12 +199,12 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/tom-tubeless/linux-server-management"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
+                data-toggle="tooltip" data-placement="left" title="Quell-Repository"><i
+                    class="fab fa-github"></i>Repository</button></a>
         <a class="issues-button"
             href="https://github.com/tom-tubeless/linux-server-management/issues/new?title=Issue%20on%20page%20%2Fdocs/001_internet.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+                title="Öffnen Sie ein Problem"><i class="fas fa-lightbulb"></i>offenes Thema</button></a>
         
     </div>
 </div>
@@ -202,8 +212,8 @@ commentsRunWhenDOMLoaded(addUtterances);
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
+        title="Vollbildmodus"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -214,7 +224,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="dropdown-buttons">
         
         <a class="binder-button" href="https://mybinder.org/v2/gh/tom-tubeless/linux-server-management/main?urlpath=lab/tree/book/docs/001_internet.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Starten Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -222,7 +232,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         
         <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+            onclick="initThebeSBT()" title="Starten Thebe" data-toggle="tooltip" data-placement="left"><i
                 class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
@@ -234,7 +244,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+                <i class="fas fa-list"></i> Inhalt
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -306,7 +316,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="das-internet">
 <h1><span class="section-number">1. </span>Das Internet<a class="headerlink" href="#das-internet" title="Permalink to this headline">¶</a></h1>
-<p>Nach <span id="id1">[<a class="reference internal" href="#id3" title="Timothy B. Lee. The internet, explained. \url https://www.vox.com/2014/6/16/18076282/the-internet, 2015. Accessed: 2021-09-14.">1</a>]</span></p>
+<p>Nach <span id="id1">[<a class="reference internal" href="002_networking.html#id3" title="Timothy B. Lee. The internet, explained. \url https://www.vox.com/2014/6/16/18076282/the-internet, 2015. Accessed: 2021-09-14.">1</a>]</span></p>
 <div class="section" id="was-ist-das-internet">
 <h2><span class="section-number">1.1. </span>Was ist das Internet?<a class="headerlink" href="#was-ist-das-internet" title="Permalink to this headline">¶</a></h2>
 <p>Das Internet ist das beliebteste Computernetz der Welt.
@@ -357,7 +367,7 @@ Aber die ICANN kontrolliert nicht, wer sich mit dem Internet verbinden kann oder
 <div class="section" id="was-ist-eine-ip-adresse">
 <h2><span class="section-number">1.5. </span>Was ist eine IP-Adresse?<a class="headerlink" href="#was-ist-eine-ip-adresse" title="Permalink to this headline">¶</a></h2>
 <p><em>Internet-Protokoll-Adressen</em> sind Nummern, mit denen sich Computer im Internet gegenseitig identifizieren.
-Die IP-Adresse von <a class="reference external" href="http://ww-gym.de">ww-gym.de</a> lautet zum Beispiel (159.69.35.123).</p>
+Die IP-Adresse von <a class="reference external" href="http://ww-gym.de">ww-gym.de</a> lautet zum Beispiel (159.69.35.123gh).</p>
 <p>Eine Abteilung der ICANN, die so genannte Internet Assigned Numbers Authority, ist für die Verteilung der IP-Adressen zuständig, um sicherzustellen, dass nicht zwei verschiedene Organisationen dieselbe Adresse verwenden.</p>
 </div>
 <div class="section" id="was-ist-ipv6">
@@ -436,7 +446,7 @@ Die Inhaber dieser <em>Second-Level-Domains</em> können wiederum <em>Sub-Domain
 Sowohl Kriminelle als auch Regierungsspione haben versucht, DNS zu kompromittieren, um sich als beliebte Websites wie <a class="reference external" href="http://facebook.com">facebook.com</a> und <a class="reference external" href="http://gmail.com">gmail.com</a> auszugeben und deren private Kommunikation abzufangen.
 Ein Standard namens DNSSEC versucht, die DNS-Sicherheit durch Verschlüsselung zu verbessern, aber nur wenige Menschen haben ihn übernommen.</p>
 <p id="id2"><dl class="citation">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Timothy B. Lee. The internet, explained. <a class="reference external" href="https://www.vox.com/2014/6/16/18076282/the-internet">https://www.vox.com/2014/6/16/18076282/the-internet</a>, 2015. Accessed: 2021-09-14.</p>
 </dd>
 </dl>
@@ -482,18 +492,27 @@ Ein Standard namens DNSSEC versucht, die DNS-Sicherheit durch Verschlüsselung z
             </div>
         </a>
     </div>
+     <div id="next">
+        <a class="right-next" href="002_networking.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span class="section-number">2. </span>Netzwerke</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
-          By Lutz Tomala<br/>
+          Durch Lutz Tomala<br/>
         
-            &copy; Copyright MIT License Copyright (c) 2021 Lutz Tomala.<br/>
+            &copy; Urheberrechte © MIT License Copyright (c) 2021 Lutz Tomala.<br/>
       </p>
     </div>
   </footer>

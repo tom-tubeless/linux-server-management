@@ -72,7 +72,7 @@ Aber die ICANN kontrolliert nicht, wer sich mit dem Internet verbinden kann oder
 ## Was ist eine IP-Adresse?
 
 _Internet-Protokoll-Adressen_ sind Nummern, mit denen sich Computer im Internet gegenseitig identifizieren.
-Die IP-Adresse von ww-gym.de lautet zum Beispiel \(159.69.35.123\).
+Die IP-Adresse von ww-gym.de lautet zum Beispiel \(159.69.35.123gh\).
 
 Eine Abteilung der ICANN, die so genannte Internet Assigned Numbers Authority, ist für die Verteilung der IP-Adressen zuständig, um sicherzustellen, dass nicht zwei verschiedene Organisationen dieselbe Adresse verwenden.
 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linux-Server-Management &#8212; Linux Server Management</title>
+    <title>2. Netzwerke &#8212; Linux Server Management</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -85,7 +85,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Das Internet" href="001_internet.html" />
+    <link rel="prev" title="1. Das Internet" href="001_internet.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -120,20 +120,20 @@ commentsRunWhenDOMLoaded(addUtterances);
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="000_intro.html">
    Linux-Server-Management
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="001_internet.html">
    1. Das Internet
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="002_networking.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    2. Netzwerke
   </a>
  </li>
@@ -177,11 +177,11 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         <a class="dropdown-buttons"
-            href="../_sources/docs/000_intro.ipynb"><button type="button"
+            href="../_sources/docs/002_networking.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Notebook-Datei herunterladen" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/000_intro.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/002_networking.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -201,7 +201,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-toggle="tooltip" data-placement="left" title="Quell-Repository"><i
                     class="fab fa-github"></i>Repository</button></a>
         <a class="issues-button"
-            href="https://github.com/tom-tubeless/linux-server-management/issues/new?title=Issue%20on%20page%20%2Fdocs/000_intro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/tom-tubeless/linux-server-management/issues/new?title=Issue%20on%20page%20%2Fdocs/002_networking.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Öffnen Sie ein Problem"><i class="fas fa-lightbulb"></i>offenes Thema</button></a>
         
@@ -222,7 +222,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/tom-tubeless/linux-server-management/main?urlpath=lab/tree/book/docs/000_intro.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tom-tubeless/linux-server-management/main?urlpath=lab/tree/book/docs/002_networking.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Starten Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -242,6 +242,53 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Inhalt
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipps-beim-umgang-mit-filius-kont">
+   2.1. Tipps beim Umgang mit Filius kont
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kleine-lan-party-verbindung-von-zwei-rechnern">
+   2.2. Kleine LAN-Party: Verbindung von zwei Rechnern
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-1">
+     Übung 1
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#entwurfsmodus">
+       Entwurfsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#aktionsmodus">
+       Aktionsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fragen">
+       Fragen
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ping-erklart">
+     Ping erklärt
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -250,10 +297,68 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="linux-server-management">
-<h1>Linux-Server-Management<a class="headerlink" href="#linux-server-management" title="Permalink to this headline">¶</a></h1>
-<p>Unterrichtsplanung, -inhalte und -materialien für Linux-Server-Management am Wim-Wenders-Gymnasium Düsseldorf.</p>
-<div class="toctree-wrapper compound">
+  <div class="tex2jax_ignore mathjax_ignore section" id="netzwerke">
+<h1><span class="section-number">2. </span>Netzwerke<a class="headerlink" href="#netzwerke" title="Permalink to this headline">¶</a></h1>
+<p>In diesem Kapitel wirst du selbst tätig.
+Mit dem Netzwerksimulator Filius kannst du die Grundlagen von Computer-Netzwerken auf dem eigenen Computer ausprobieren.
+Den Netzwerksimulator Filius gibt es für Windows, OSX und Linux.
+Du kannst Filius kostenlos unter <a class="reference external" href="https://www.lernsoftware-filius.de">https://www.lernsoftware-filius.de</a> herunterladen und installieren.</p>
+<div class="section" id="tipps-beim-umgang-mit-filius-kont">
+<h2><span class="section-number">2.1. </span>Tipps beim Umgang mit Filius kont<a class="headerlink" href="#tipps-beim-umgang-mit-filius-kont" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Achte darauf, ob du die Arbeitsschritte im Entwurfsmodus <img alt="" src="../_images/filius_entwurfsmodus.png" /> oder Aktionsmodus <img alt="" src="../_images/filius_aktionsmodus.png" /> durchführen musst.</p></li>
+<li><p>Verkleinere im Aktionsmodus das Hauptfenster so, dass die Desktop-Ansichten der einzelnen Geräte neben das Hauptfenster passen.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Benenne die Rechner nach ihrer Funktion und hänge einen Teil der IP-Adresse an (z.B. Webserver mit der IP-Adresse 192.168.0.3 bekommt den Namen „Webserver_0.3“).</p></li>
+<li><p>Verwende zur besseren Übersicht für Clients („normale“ Rechner) immer das Notebook.</p></li>
+<li><p>Verwende für Computer die eine Server-Funktion ausüben immer den Rechner.</p></li>
+<li><p>Wenn du mehr als zwei Computer verbinden möchtest, benötigst du einen Switch.</p></li>
+<li><p>Falls du zwei Netzwerke miteinander verbinden möchtest, benötigst du einen Vermittlungsrechner (Router).</p></li>
+<li><p>Über Modems können Netze rechnerübergreifend verbunden werden.</p></li>
+</ul>
+</div>
+<div class="section" id="kleine-lan-party-verbindung-von-zwei-rechnern">
+<h2><span class="section-number">2.2. </span>Kleine LAN-Party: Verbindung von zwei Rechnern<a class="headerlink" href="#kleine-lan-party-verbindung-von-zwei-rechnern" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ubung-1">
+<h3>Übung 1<a class="headerlink" href="#ubung-1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="entwurfsmodus">
+<h4>Entwurfsmodus<a class="headerlink" href="#entwurfsmodus" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Erstelle ein Netzwerk mit zwei vernetzten Clients („normale“ Rechner)</p></li>
+<li><p>Ändere Die Namen der Notebooks auf <em>Client_1_10</em> und <em>Client_2_10</em>.</p></li>
+</ol>
+</div>
+<div class="section" id="aktionsmodus">
+<h4>Aktionsmodus<a class="headerlink" href="#aktionsmodus" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Installiere auf <em>Client_1_10</em> die <em>Befehlszeilenkonsole</em></p></li>
+<li><p>Öffne die Befehlszeilenkonsole und trage folgenden Befehl ein: <code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">192.168.0.10</span></code>.</p></li>
+<li><p>Öffne mit einem Rechtsklick auf den entsprechenden Clienten <em>Datenaustausch anzeigen</em>.</p></li>
+</ol>
+</div>
+<div class="section" id="fragen">
+<h4>Fragen<a class="headerlink" href="#fragen" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Was beobachtest du, wenn du dir die Befehlszeilenkonsole und die Datenaustausch-Fenster (Protokolle) beider Clients anschaust?</p></li>
+<li><p>Wieviele Pakete werden verschickt?</p></li>
+<li><p>Wieviele Pakete werden empfangen?</p></li>
+<li><p>Was ist im Datenaustausch-Fenster von Client 1_10 passiert?</p></li>
+<li><p>Was ist im Datenaustausch-Fenster von Client 2_10 passiert?</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="ping-erklart">
+<h3>Ping erklärt<a class="headerlink" href="#ping-erklart" title="Permalink to this headline">¶</a></h3>
+<p>Ping ist ein Diagnose-Programm, mit dem überprüft werden kann, ob ein bestimmtes Gerät in einem IP-Netzwerk erreichbar ist. Daneben es auch die Zeitspanne zwischen dem Aussenden eines Paketes zu diesem Host und dem Empfangen eines daraufhin unmittelbar zurückgeschickten Antwortpaketes an (= Paketumlaufzeit, meist round trip time oder RTT genannt). Das Programm wird üblicherweise als Konsolenbefehl ausgeführt.</p>
+<p><a class="reference external" href="https://youtu.be/y6GRa4skFtU"><img alt="" src="https://youtu.be/y6GRa4skFtU" /></a></p>
+<p id="id1"><dl class="citation">
+<dt class="label" id="id3"><span class="brackets">1</span></dt>
+<dd><p>Timothy B. Lee. The internet, explained. <a class="reference external" href="https://www.vox.com/2014/6/16/18076282/the-internet">https://www.vox.com/2014/6/16/18076282/the-internet</a>, 2015. Accessed: 2021-09-14.</p>
+</dd>
+</dl>
+</p>
+</div>
 </div>
 </div>
 
@@ -286,15 +391,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 
 <div class='prev-next-bottom'>
     
-     <div id="next">
-        <a class="right-next" href="001_internet.html" title="next page">
+    <div id="prev">
+        <a class="left-prev" href="001_internet.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
+                <p class="prevnext-label">previous</p>
                 <p class="prevnext-title"><span class="section-number">1. </span>Das Internet</p>
             </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
         </a>
-     </div>
+    </div>
 
 </div>
         
