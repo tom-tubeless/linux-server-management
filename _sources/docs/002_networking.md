@@ -64,7 +64,3 @@ Du kannst Filius kostenlos unter [https://www.lernsoftware-filius.de](https://ww
 Ping ist ein Diagnose-Programm, mit dem überprüft werden kann, ob ein bestimmtes Gerät in einem IP-Netzwerk erreichbar ist. Daneben es auch die Zeitspanne zwischen dem Aussenden eines Paketes zu diesem Host und dem Empfangen eines daraufhin unmittelbar zurückgeschickten Antwortpaketes an (= Paketumlaufzeit, meist round trip time oder RTT genannt). Das Programm wird üblicherweise als Konsolenbefehl ausgeführt.
 
 [![](https://youtu.be/y6GRa4skFtU)](https://youtu.be/y6GRa4skFtU)
-
-```{bibliography}
-:style: plain
-```
