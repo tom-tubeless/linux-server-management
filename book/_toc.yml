@@ -7,5 +7,6 @@ options:
   numbered: 2
 chapters:
   - file: docs/001_internet
+  - file: docs/002_networking
   # sections:
   #   - file: docs/101_hello_world
