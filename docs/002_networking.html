@@ -286,6 +286,42 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#switch-und-webserver-software">
+   2.3. Switch und Webserver-Software
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-2">
+     Übung 2
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Entwurfsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Aktionsmodus
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-3">
+     Übung 3
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Entwurfsmodus
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -354,6 +390,62 @@ Du kannst Filius kostenlos unter <a class="reference external" href="https://www
 <p><a href="http://www.youtube.com/watch?feature=player_embedded&v=y6GRa4skFtU
 " target="_blank"><img src="http://img.youtube.com/vi/y6GRa4skFtU/0.jpg" 
 alt="Ping" width="800" border="10" /></a></p>
+</div>
+</div>
+<div class="section" id="switch-und-webserver-software">
+<h2><span class="section-number">2.3. </span>Switch und Webserver-Software<a class="headerlink" href="#switch-und-webserver-software" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ubung-2">
+<h3>Übung 2<a class="headerlink" href="#ubung-2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4>Entwurfsmodus<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Erstelle ein Netzwerk mit zwei Clients und einem Server (Du benötigst hierzu zwei Notebooks, einen Rechner, einen Switch und Kabel).</p></li>
+<li><p>Bennene die Rechner folgensermaßen</p></li>
+</ol>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>IP-Adresse</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Client_10</p></td>
+<td><p>192.168.0.10</p></td>
+</tr>
+<tr class="row-odd"><td><p>Client_11</p></td>
+<td><p>192.168.0.11</p></td>
+</tr>
+<tr class="row-even"><td><p>Webserver_12</p></td>
+<td><p>192.168.0.12</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id2">
+<h4>Aktionsmodus<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Installiere auf dem <em>Webserver_12</em> die Software <em>“Webserver”</em> und starte ihn
+anschließend.</p></li>
+<li><p>Installiere auf beiden <em>Clients</em> einen <em>“Webbrowser”</em>.</p></li>
+<li><p>Du möchtest nun die Webseite des <em>Webservers</em> aufrufen. Öffne dazu den <em>Webbrowser</em> deines <em>Clients</em> und trage in die Adresszeile die <em>IP-Adresse</em> des <em>Webservers</em> ein (siehe Tabelle).</p></li>
+<li><p>Hat alles geklappt? Dann mache mit Übung 3 weiter.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="ubung-3">
+<h3>Übung 3<a class="headerlink" href="#ubung-3" title="Permalink to this headline">¶</a></h3>
+<p>Die Webseite gefällt dir nicht, deshalb möchtest du Änderungen daran vornehmen.
+Hierzu musst du vorher aber noch einige Arbeitsschritte ausführen.</p>
+<div class="section" id="id3">
+<h4>Entwurfsmodus<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Installiere auf <em>Webserver_12</em> den <em>“Text-Editor”</em>.</p></li>
+<li><p>Öffne den <em>“Text-Editor”</em>. Klicke auf <em>“Datei” -&gt; “Öffnen”</em> und wähle im Ordner <em>“webserver”</em> die Datei <em>“index.html”</em> aus. Hinweis: <em>“index.html”</em> muss im Feld <em>“Dateiname”</em> stehen, dann auf <em>“Öffnen”</em> klicken.</p></li>
+<li><p>Die Homepage soll als <em>“Titel”</em> deine Namen erhalten. Ändere den Titel indem du den Begriff <em>“Standardseite”</em> durch deinen Namen ersetzt. <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;Standardseite&lt;/title&gt;</span></code>wird geändert in z.B. <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;Tom</span> <span class="pre">Tubeless</span> <span class="pre">Homepage&lt;/title&gt;</span></code>. Klicke anschließend auf <em>“Datei” -&gt; “Speichern”</em> und überprüfe deine Änderung im <em>Webbrowser</em> von <em>Client_10</em> oder <em>Client_11</em> (Hinweis: Adresse lautet <em>192.168.0.12</em>).</p></li>
+<li><p>Ändere die Überschrift ebenfalls ab. Ersetze <em>“Filius”</em> durch deinen Namen. <code class="docutils literal notranslate"><span class="pre">&lt;h2&gt;FILIUS</span> <span class="pre">-</span> <span class="pre">Webserver&lt;/h2&gt;</span></code> wird geändert in z.B. <code class="docutils literal notranslate"><span class="pre">&lt;h2&gt;Tubeless</span> <span class="pre">Webserver&lt;/h2&gt;</span></code>. Klicke anschließend auf <em>“Datei” -&gt; “Speichern”</em> und überprüfe deine Änderung im <em>Webbrowser</em> von <em>Client_10</em> oder <em>Client_11</em>.</p></li>
+<li><p>Installiere auf <em>Webserver_12</em> die Software <em>“Datei-Explorer”</em> und ändere das Bild der Homepage. Probiere es erst selbstständig, bevor du eine Lösung recherchierst.</p></li>
+</ol>
+</div>
 </div>
 </div>
 </div>
