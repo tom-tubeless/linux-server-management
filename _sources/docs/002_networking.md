@@ -113,6 +113,10 @@ Hierzu musst du vorher aber noch einige Arbeitsschritte ausführen.
 
 
 ## Nameserver (DNS)
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=kOQVqQUqorU
+" target="_blank"><img src="http://img.youtube.com/vi/kOQVqQUqorU/0.jpg" 
+alt="#23 DNS Server - einfach und schnell erklärt!" width="800" border="10" /></a>
 ### Übung 4
 Wenn du im Internet unterwegs bist, rufst du die Seiten nicht über die IP-Adresse auf, sondern du gibst einen Namen ein -> z.B. www.google.de.
 Dies richtest du jetzt für deine geänderte Homepage ein.
