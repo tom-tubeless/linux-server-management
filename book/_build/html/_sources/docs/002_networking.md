@@ -81,9 +81,9 @@ alt="Ping" width="800" border="10" /></a>
 
 | Name         | IP-Adresse   |
 | ------------ | ------------ |
-| Client_10    | 192.168.0.10 |
-| Client_11    | 192.168.0.11 |
-| Webserver_12 | 192.168.0.12 |
+| `Client_10`    | `192.168.0.10` |
+| `Client_11`    | `192.168.0.11` |
+| `Webserver_12` | `192.168.0.12` |
 
 #### Aktionsmodus
 
@@ -119,23 +119,83 @@ Dies richtest du jetzt für deine geänderte Homepage ein.
 
 #### Entwurfsmodus
 
-1. Erweitere dein Netzwerk um einen Server (Name: _Nameserver_13_; IP-Adresse: _192.168.0.13_).
+1. Erweitere dein Netzwerk um einen Server (Name: `Nameserver_13`; IP-Adresse: `192.168.0.13`).
 2. Verbinde den _Nameserver_13_ mit dem Switch.
 
 #### Aktionsmodus
 1. Installiere auf _Nameserver_13_ die Software _"DNS-Server"_.
 2. Öffne die Software _"DNS-Server"_ und fülle die Felder wie folgt aus:
-   1. Domainname: _www.server-management.de_
-   2. IP-Adresse: _192.168.0.12_
+   1. Domainname: `www.server-management.de`
+   2. IP-Adresse: `192.168.0.12`
 3. Klicke danach auf _"Hinzufügen"_ und anschließend auf _"Starten"_.
 
 #### Entwurfsmodus
-1. Nun musst du an deinen Clients und Servern noch Einstellungen vornehmen. Gebe bei allen Geräten unter _"Domain Name Server"_ folgende IP-Adresse ein: _192.168.0.13_.
+1. Nun musst du an deinen Clients und Servern noch Einstellungen vornehmen. Gebe bei allen Geräten unter _"Domain Name Server"_ folgende IP-Adresse ein: `192.168.0.13`.
 
 #### Aktionsmodus
-1. Jetzt kannst du testen, ob deine Homepage unter der Adresse _www.server-management.de_ erreichbar ist. Öffne dazu in _Client_10_ oder _Client_11_ deinen Webbrowser und gebe die Adresse ein.
+1. Jetzt kannst du testen, ob deine Homepage unter der Adresse `www.server-management.de` erreichbar ist. Öffne dazu in _Client_10_ oder _Client_11_ deinen Webbrowser und gebe die Adresse ein.
 
 > Wenn deine Homepage erscheint hast du alles richtig gemacht. Falls die Meldung "Server konnte nicht erreicht werden!" angezeigt wird, hast du vermutlich den "DNS-Server" nicht gestartet.
+
+## Mailserver
+
+### Übung 5
+Deine Rechner sind vernetzt, deine Homepage ist erreichbar, dann wird es Zeit für E-Mails.
+
+#### Entwurfsmodus
+1. Erweitere dein Netzwerk um einen Server:
+   1. Name: `Mailserver_14`
+   2. IP-Adresse: `192.168.0.14`
+   3. Domain Name Server: `192.168.0.13`
+2. Verbinde den Mailserver mit dem Switch.
+
+#### Aktionsmodus
+1. Installiere auf _Mailserver_14_ die Software _"E-Mail-Server"_ und konfiguriere ihn:
+   1. Maildomain: `server-management.de`
+   2. Erstelle zwei E-Mail-Konten:
+      1. Benutzername: `grace`
+      2. Passwort: `12345`
+      3. Konto erstellen
+      4. Benutzername: `alan`
+      5. Passwort: `12345`
+      6. Konto erstellen
+2. Starte den E-Mail-Server.
+
+> Alan und Grace? Wenn du Zeit hast, recherchiere nach Grace Hopper {cite:ps}`grace2022` und Alan Turing {cite:ps}`turing2022`.
+
+#### Aktionsmodus
+1. Installiere auf _Client_10_ und _Client_11_ die Software _"E-Mail-Programm"_.
+2. Öffne auf _Client_10_ das _"E-Mail-Programm"_ und klicke auf _"Konto einrichten"_. Nehme folgende Einstellungen vor:
+   1. Name: `Grace Hopper`
+   2. E-Mail-Adresse: `grace@server-management.de`
+   3. POP3-Server: `mail.server-management.de`
+   4. POP3-Port: `110`
+   5. SMTP-Server: `mail.server-management.de`
+   6. SMTP-Port: `25`
+   7. Benutzername: `grace`
+   8. Passwort: `12345`
+
+3. Öffne auf _Client_11_ das _"E-Mail-Programm"_ und klicke auf _"Konto einrichten"_. Nehme
+folgende Einstellungen vor:
+  1. Name: Alan Turing
+  2. E-Mail-Adresse: `turing@server-management.de`
+  3. POP3-Server: `mail.server-management.de`
+  4. POP3-Port: `110`
+  5. SMTP-Server: `mail.server-management.de`
+  6. SMTP-Port: `25`
+  7. Benutzername: `alan`
+  8. Passwort: `12345`
+
+4. Öffne auf _Nameserver_13_ das Programm _"DNS-Server"_. Nehme unter _"Adressen"_ folgende Einstellungen vor:
+   1. Domainname: `mail.server-management.de`
+   2. IP-Adresse: `192.168.0.14`
+   3. Klicke anschließend auf _"Hinzufügen"_.
+
+![Folgende Funktionen hast du im E-Mail-Programm.](img/filius_email-client.png)
+
+5. Öffne auf _Client_10_ das _"E-Mail-Programm"_ und schreibe eine E-Mail an folgende Adresse: `alan@server-management.de`.
+6. Öffne auf _Client_11_ das _"E-Mail-Programm"_ und rufe deine E-Mails. Antworte auf die E-Mail von Grace.
+7. Wechsle wieder zu _Client_10_ und rufe deine E-Mails ab. Die Antwort von Alan müsste angekommen sein.
 
 ```{bibliography}
 :style: plain
