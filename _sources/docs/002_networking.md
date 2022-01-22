@@ -177,7 +177,7 @@ Deine Rechner sind vernetzt, deine Homepage ist erreichbar, dann wird es Zeit f�
 
 3. Öffne auf _Client_11_ das _"E-Mail-Programm"_ und klicke auf _"Konto einrichten"_. Nehme
 folgende Einstellungen vor:
-  1. Name: Alan Turing
+  1. Name: `Alan Turing`
   2. E-Mail-Adresse: `turing@server-management.de`
   3. POP3-Server: `mail.server-management.de`
   4. POP3-Port: `110`
@@ -191,11 +191,17 @@ folgende Einstellungen vor:
    2. IP-Adresse: `192.168.0.14`
    3. Klicke anschließend auf _"Hinzufügen"_.
 
-![](img/filius_email-client.png)
+```{figure} ./img/filius_e-mail-client.png
+---
+height: 300px
+name: filius_email-client
+---
+Folgende Funktionen hast du im E-Mail-Programm.
+```
 
-5. Öffne auf _Client_10_ das _"E-Mail-Programm"_ und schreibe eine E-Mail an folgende Adresse: `alan@server-management.de`.
-6. Öffne auf _Client_11_ das _"E-Mail-Programm"_ und rufe deine E-Mails. Antworte auf die E-Mail von Grace.
-7. Wechsle wieder zu _Client_10_ und rufe deine E-Mails ab. Die Antwort von Alan müsste angekommen sein.
+1. Öffne auf _Client_10_ das _"E-Mail-Programm"_ und schreibe eine E-Mail an folgende Adresse: `alan@server-management.de`.
+2. Öffne auf _Client_11_ das _"E-Mail-Programm"_ und rufe deine E-Mails. Antworte auf die E-Mail von Grace.
+3. Wechsle wieder zu _Client_10_ und rufe deine E-Mails ab. Die Antwort von Alan müsste angekommen sein.
 
 ```{bibliography}
 :style: plain
