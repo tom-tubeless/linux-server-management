@@ -203,6 +203,12 @@ Folgende Funktionen hast du im E-Mail-Programm.
 2. Öffne auf _Client_11_ das _"E-Mail-Programm"_ und rufe deine E-Mails. Antworte auf die E-Mail von Grace.
 3. Wechsle wieder zu _Client_10_ und rufe deine E-Mails ab. Die Antwort von Alan müsste angekommen sein.
 
+> Recherchiere die grundlegenden Protokolle für den E-Mail-Verkehr (z. B. POP3, SMTP). {cite:ps}`mailserver2022`
+
+<!-- ## Zwei Netzwerke miteinander verbinden -->
+
+
+
 ```{bibliography}
 :style: plain
 ```
