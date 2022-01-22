@@ -139,6 +139,10 @@ Dies richtest du jetzt für deine geänderte Homepage ein.
 
 ## Mailserver
 
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=byJk8lr0j9s
+" target="_blank"><img src="http://img.youtube.com/vi/byJk8lr0j9s/0.jpg" 
+alt="So funktioniert Email - auf den Punkt gebracht" width="800" border="10" /></a>
+
 ### Übung 5
 Deine Rechner sind vernetzt, deine Homepage ist erreichbar, dann wird es Zeit für E-Mails.
 
