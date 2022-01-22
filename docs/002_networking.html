@@ -359,6 +359,35 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mailserver">
+   2.5. Mailserver
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-5">
+     Übung 5
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id9">
+       Entwurfsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id10">
+       Aktionsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id13">
+       Aktionsmodus
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -488,6 +517,35 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mailserver">
+   2.5. Mailserver
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-5">
+     Übung 5
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id9">
+       Entwurfsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id10">
+       Aktionsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id13">
+       Aktionsmodus
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
 </ul>
 
                         </nav>
@@ -576,14 +634,14 @@ alt="Ping" width="800" border="10" /></a></p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Client_10</p></td>
-<td><p>192.168.0.10</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Client_10</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">192.168.0.10</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>Client_11</p></td>
-<td><p>192.168.0.11</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Client_11</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">192.168.0.11</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p>Webserver_12</p></td>
-<td><p>192.168.0.12</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Webserver_12</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">192.168.0.12</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -615,7 +673,7 @@ Hierzu musst du vorher aber noch einige Arbeitsschritte ausführen.</p>
 <div><p>Wenn die Übung 3 für dich kein Problem war, dann darfst du gerne auch das Bild auf der Homepage ändern.</p>
 </div></blockquote>
 <ol class="simple">
-<li><p>Installiere auf <em>Webserver_12</em> die Software <em>“Datei-Explorer”</em> und ändere das Bild der Homepage. Probiere es erst selbstständig, bevor du eine Lösung recherchierst. <span id="id4">[<a class="reference internal" href="#id11">2</a>]</span></p></li>
+<li><p>Installiere auf <em>Webserver_12</em> die Software <em>“Datei-Explorer”</em> und ändere das Bild der Homepage. Probiere es erst selbstständig, bevor du eine Lösung recherchierst. <span id="id4">[<a class="reference internal" href="#id17">2</a>]</span></p></li>
 </ol>
 <blockquote>
 <div><p>An den grün blinkenden Kabeln kann man den Netzwerkverkehr sehr gut erkennen!</p>
@@ -632,7 +690,7 @@ Dies richtest du jetzt für deine geänderte Homepage ein.</p>
 <div class="section" id="id5">
 <h4>Entwurfsmodus<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <ol class="simple">
-<li><p>Erweitere dein Netzwerk um einen Server (Name: <em>Nameserver_13</em>; IP-Adresse: <em>192.168.0.13</em>).</p></li>
+<li><p>Erweitere dein Netzwerk um einen Server (Name: <code class="docutils literal notranslate"><span class="pre">Nameserver_13</span></code>; IP-Adresse: <code class="docutils literal notranslate"><span class="pre">192.168.0.13</span></code>).</p></li>
 <li><p>Verbinde den <em>Nameserver_13</em> mit dem Switch.</p></li>
 </ol>
 </div>
@@ -642,8 +700,8 @@ Dies richtest du jetzt für deine geänderte Homepage ein.</p>
 <li><p>Installiere auf <em>Nameserver_13</em> die Software <em>“DNS-Server”</em>.</p></li>
 <li><p>Öffne die Software <em>“DNS-Server”</em> und fülle die Felder wie folgt aus:</p>
 <ol class="simple">
-<li><p>Domainname: <em><a class="reference external" href="http://www.server-management.de">www.server-management.de</a></em></p></li>
-<li><p>IP-Adresse: <em>192.168.0.12</em></p></li>
+<li><p>Domainname: <code class="docutils literal notranslate"><span class="pre">www.server-management.de</span></code></p></li>
+<li><p>IP-Adresse: <code class="docutils literal notranslate"><span class="pre">192.168.0.12</span></code></p></li>
 </ol>
 </li>
 <li><p>Klicke danach auf <em>“Hinzufügen”</em> und anschließend auf <em>“Starten”</em>.</p></li>
@@ -652,23 +710,114 @@ Dies richtest du jetzt für deine geänderte Homepage ein.</p>
 <div class="section" id="id7">
 <h4>Entwurfsmodus<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
 <ol class="simple">
-<li><p>Nun musst du an deinen Clients und Servern noch Einstellungen vornehmen. Gebe bei allen Geräten unter <em>“Domain Name Server”</em> folgende IP-Adresse ein: <em>192.168.0.13</em>.</p></li>
+<li><p>Nun musst du an deinen Clients und Servern noch Einstellungen vornehmen. Gebe bei allen Geräten unter <em>“Domain Name Server”</em> folgende IP-Adresse ein: <code class="docutils literal notranslate"><span class="pre">192.168.0.13</span></code>.</p></li>
 </ol>
 </div>
 <div class="section" id="id8">
 <h4>Aktionsmodus<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
 <ol class="simple">
-<li><p>Jetzt kannst du testen, ob deine Homepage unter der Adresse <em><a class="reference external" href="http://www.server-management.de">www.server-management.de</a></em> erreichbar ist. Öffne dazu in <em>Client_10</em> oder <em>Client_11</em> deinen Webbrowser und gebe die Adresse ein.</p></li>
+<li><p>Jetzt kannst du testen, ob deine Homepage unter der Adresse <code class="docutils literal notranslate"><span class="pre">www.server-management.de</span></code> erreichbar ist. Öffne dazu in <em>Client_10</em> oder <em>Client_11</em> deinen Webbrowser und gebe die Adresse ein.</p></li>
 </ol>
 <blockquote>
 <div><p>Wenn deine Homepage erscheint hast du alles richtig gemacht. Falls die Meldung “Server konnte nicht erreicht werden!” angezeigt wird, hast du vermutlich den “DNS-Server” nicht gestartet.</p>
 </div></blockquote>
-<p id="id9"><dl class="citation">
-<dt class="label" id="id12"><span class="brackets">1</span></dt>
+</div>
+</div>
+</div>
+<div class="section" id="mailserver">
+<h2><span class="section-number">2.5. </span>Mailserver<a class="headerlink" href="#mailserver" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ubung-5">
+<h3>Übung 5<a class="headerlink" href="#ubung-5" title="Permalink to this headline">¶</a></h3>
+<p>Deine Rechner sind vernetzt, deine Homepage ist erreichbar, dann wird es Zeit für E-Mails.</p>
+<div class="section" id="id9">
+<h4>Entwurfsmodus<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Erweitere dein Netzwerk um einen Server:</p>
+<ol class="simple">
+<li><p>Name: <code class="docutils literal notranslate"><span class="pre">Mailserver_14</span></code></p></li>
+<li><p>IP-Adresse: <code class="docutils literal notranslate"><span class="pre">192.168.0.14</span></code></p></li>
+<li><p>Domain Name Server: <code class="docutils literal notranslate"><span class="pre">192.168.0.13</span></code></p></li>
+</ol>
+</li>
+<li><p>Verbinde den Mailserver mit dem Switch.</p></li>
+</ol>
+</div>
+<div class="section" id="id10">
+<h4>Aktionsmodus<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Installiere auf <em>Mailserver_14</em> die Software <em>“E-Mail-Server”</em> und konfiguriere ihn:</p>
+<ol class="simple">
+<li><p>Maildomain: <code class="docutils literal notranslate"><span class="pre">server-management.de</span></code></p></li>
+<li><p>Erstelle zwei E-Mail-Konten:</p>
+<ol class="simple">
+<li><p>Benutzername: <code class="docutils literal notranslate"><span class="pre">grace</span></code></p></li>
+<li><p>Passwort: <code class="docutils literal notranslate"><span class="pre">12345</span></code></p></li>
+<li><p>Konto erstellen</p></li>
+<li><p>Benutzername: <code class="docutils literal notranslate"><span class="pre">alan</span></code></p></li>
+<li><p>Passwort: <code class="docutils literal notranslate"><span class="pre">12345</span></code></p></li>
+<li><p>Konto erstellen</p></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Starte den E-Mail-Server.</p></li>
+</ol>
+<blockquote>
+<div><p>Alan und Grace? Wenn du Zeit hast, recherchiere nach Grace Hopper <span id="id11">[<a class="reference internal" href="#id15">4</a>]</span> und Alan Turing <span id="id12">[<a class="reference internal" href="#id25">3</a>]</span>.</p>
+</div></blockquote>
+</div>
+<div class="section" id="id13">
+<h4>Aktionsmodus<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Installiere auf <em>Client_10</em> und <em>Client_11</em> die Software <em>“E-Mail-Programm”</em>.</p></li>
+<li><p>Öffne auf <em>Client_10</em> das <em>“E-Mail-Programm”</em> und klicke auf <em>“Konto einrichten”</em>. Nehme folgende Einstellungen vor:</p>
+<ol class="simple">
+<li><p>Name: <code class="docutils literal notranslate"><span class="pre">Grace</span> <span class="pre">Hopper</span></code></p></li>
+<li><p>E-Mail-Adresse: <code class="docutils literal notranslate"><span class="pre">grace&#64;server-management.de</span></code></p></li>
+<li><p>POP3-Server: <code class="docutils literal notranslate"><span class="pre">mail.server-management.de</span></code></p></li>
+<li><p>POP3-Port: <code class="docutils literal notranslate"><span class="pre">110</span></code></p></li>
+<li><p>SMTP-Server: <code class="docutils literal notranslate"><span class="pre">mail.server-management.de</span></code></p></li>
+<li><p>SMTP-Port: <code class="docutils literal notranslate"><span class="pre">25</span></code></p></li>
+<li><p>Benutzername: <code class="docutils literal notranslate"><span class="pre">grace</span></code></p></li>
+<li><p>Passwort: <code class="docutils literal notranslate"><span class="pre">12345</span></code></p></li>
+</ol>
+</li>
+<li><p>Öffne auf <em>Client_11</em> das <em>“E-Mail-Programm”</em> und klicke auf <em>“Konto einrichten”</em>. Nehme
+folgende Einstellungen vor:</p></li>
+<li><p>Name: Alan Turing</p></li>
+<li><p>E-Mail-Adresse: <code class="docutils literal notranslate"><span class="pre">turing&#64;server-management.de</span></code></p></li>
+<li><p>POP3-Server: <code class="docutils literal notranslate"><span class="pre">mail.server-management.de</span></code></p></li>
+<li><p>POP3-Port: <code class="docutils literal notranslate"><span class="pre">110</span></code></p></li>
+<li><p>SMTP-Server: <code class="docutils literal notranslate"><span class="pre">mail.server-management.de</span></code></p></li>
+<li><p>SMTP-Port: <code class="docutils literal notranslate"><span class="pre">25</span></code></p></li>
+<li><p>Benutzername: <code class="docutils literal notranslate"><span class="pre">alan</span></code></p></li>
+<li><p>Passwort: <code class="docutils literal notranslate"><span class="pre">12345</span></code></p></li>
+<li><p>Öffne auf <em>Nameserver_13</em> das Programm <em>“DNS-Server”</em>. Nehme unter <em>“Adressen”</em> folgende Einstellungen vor:</p>
+<ol class="simple">
+<li><p>Domainname: <code class="docutils literal notranslate"><span class="pre">mail.server-management.de</span></code></p></li>
+<li><p>IP-Adresse: <code class="docutils literal notranslate"><span class="pre">192.168.0.14</span></code></p></li>
+<li><p>Klicke anschließend auf <em>“Hinzufügen”</em>.</p></li>
+</ol>
+</li>
+</ol>
+<p><img alt="" src="docs/img/filius_email-client.png" /></p>
+<ol class="simple">
+<li><p>Öffne auf <em>Client_10</em> das <em>“E-Mail-Programm”</em> und schreibe eine E-Mail an folgende Adresse: <code class="docutils literal notranslate"><span class="pre">alan&#64;server-management.de</span></code>.</p></li>
+<li><p>Öffne auf <em>Client_11</em> das <em>“E-Mail-Programm”</em> und rufe deine E-Mails. Antworte auf die E-Mail von Grace.</p></li>
+<li><p>Wechsle wieder zu <em>Client_10</em> und rufe deine E-Mails ab. Die Antwort von Alan müsste angekommen sein.</p></li>
+</ol>
+<p id="id14"><dl class="citation">
+<dt class="label" id="id18"><span class="brackets">1</span></dt>
 <dd><p>Timothy B. Lee. The internet, explained. <span><a class="reference external" href="#"></a></span>https://www.vox.com/2014/6/16/18076282/the-internet, 2015. Accessed: 2021-09-14.</p>
 </dd>
-<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
 <dd><p>W3Schools. Html images. <span><a class="reference external" href="#"></a></span>https://www.w3schools.com/html/html_images.asp, 2022. Accessed: 2022-01-21.</p>
+</dd>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id12">3</a></span></dt>
+<dd><p>Wikipedia. Wikipedia: alan turing. <span><a class="reference external" href="#"></a></span>https://de.wikipedia.org/wiki/Alan_Turing, 2022. Accessed: 2022-01-21.</p>
+</dd>
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id11">4</a></span></dt>
+<dd><p>Wikipedia. Wikipedia: grace hopper. <span><a class="reference external" href="#"></a></span>https://de.wikipedia.org/wiki/Grace_Hopper, 2022. Accessed: 2022-01-21.</p>
 </dd>
 </dl>
 </p>
