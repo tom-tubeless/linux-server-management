@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2. Netzwerke &#8212; Linux Server Management</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.e2363ea40746bee74734a24ffefccd78.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -75,7 +75,7 @@ var addUtterances = () => {
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe,.cell"
@@ -87,7 +87,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="1. Das Internet" href="001_internet.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -186,7 +189,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -240,7 +243,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Inhalt
@@ -248,8 +251,8 @@ commentsRunWhenDOMLoaded(addUtterances);
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tipps-beim-umgang-mit-filius-kont">
-   2.1. Tipps beim Umgang mit Filius kont
+  <a class="reference internal nav-link" href="#tipps-beim-umgang-mit-filius">
+   2.1. Tipps beim Umgang mit Filius
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -315,7 +318,41 @@ commentsRunWhenDOMLoaded(addUtterances);
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id3">
+       Aktionsmodus
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nameserver-dns">
+   2.4. Nameserver (DNS)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-4">
+     Übung 4
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
        Entwurfsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       Aktionsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       Entwurfsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
+       Aktionsmodus
       </a>
      </li>
     </ul>
@@ -330,7 +367,134 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Netzwerke</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Inhalt </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipps-beim-umgang-mit-filius">
+   2.1. Tipps beim Umgang mit Filius
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kleine-lan-party-verbindung-von-zwei-rechnern">
+   2.2. Kleine LAN-Party: Verbindung von zwei Rechnern
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-1">
+     Übung 1
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#entwurfsmodus">
+       Entwurfsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#aktionsmodus">
+       Aktionsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fragen">
+       Fragen
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ping-erklart">
+     Ping erklärt
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#switch-und-webserver-software">
+   2.3. Switch und Webserver-Software
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-2">
+     Übung 2
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       Entwurfsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       Aktionsmodus
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-3">
+     Übung 3
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       Aktionsmodus
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nameserver-dns">
+   2.4. Nameserver (DNS)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-4">
+     Übung 4
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id5">
+       Entwurfsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id6">
+       Aktionsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id7">
+       Entwurfsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
+       Aktionsmodus
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="netzwerke">
@@ -339,8 +503,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 Mit dem Netzwerksimulator Filius kannst du die Grundlagen von Computer-Netzwerken auf dem eigenen Computer ausprobieren.
 Den Netzwerksimulator Filius gibt es für Windows, OSX und Linux.
 Du kannst Filius kostenlos unter <a class="reference external" href="https://www.lernsoftware-filius.de">https://www.lernsoftware-filius.de</a> herunterladen und installieren.</p>
-<div class="section" id="tipps-beim-umgang-mit-filius-kont">
-<h2><span class="section-number">2.1. </span>Tipps beim Umgang mit Filius kont<a class="headerlink" href="#tipps-beim-umgang-mit-filius-kont" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tipps-beim-umgang-mit-filius">
+<h2><span class="section-number">2.1. </span>Tipps beim Umgang mit Filius<a class="headerlink" href="#tipps-beim-umgang-mit-filius" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Achte darauf, ob du die Arbeitsschritte im Entwurfsmodus <img alt="" src="../_images/filius_entwurfsmodus.png" /> oder Aktionsmodus <img alt="" src="../_images/filius_aktionsmodus.png" /> durchführen musst.</p></li>
 <li><p>Verkleinere im Aktionsmodus das Hauptfenster so, dass die Desktop-Ansichten der einzelnen Geräte neben das Hauptfenster passen.</p></li>
@@ -362,14 +526,14 @@ Du kannst Filius kostenlos unter <a class="reference external" href="https://www
 <h4>Entwurfsmodus<a class="headerlink" href="#entwurfsmodus" title="Permalink to this headline">¶</a></h4>
 <ol class="simple">
 <li><p>Erstelle ein Netzwerk mit zwei vernetzten Clients („normale“ Rechner)</p></li>
-<li><p>Ändere Die Namen der Notebooks auf <em>Client_1_10</em> und <em>Client_2_10</em>.</p></li>
+<li><p>Ändere Die Namen der Notebooks auf <em>Client_10</em> und <em>Client_20</em>.</p></li>
 </ol>
 </div>
 <div class="section" id="aktionsmodus">
 <h4>Aktionsmodus<a class="headerlink" href="#aktionsmodus" title="Permalink to this headline">¶</a></h4>
 <ol class="simple">
 <li><p>Installiere auf <em>Client_1_10</em> die <em>Befehlszeilenkonsole</em></p></li>
-<li><p>Öffne die Befehlszeilenkonsole und trage folgenden Befehl ein: <code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">192.168.0.10</span></code>.</p></li>
+<li><p>Öffne die Befehlszeilenkonsole und trage folgenden Befehl ein: <code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">192.168.0.20</span></code>.</p></li>
 <li><p>Öffne mit einem Rechtsklick auf den entsprechenden Clienten <em>Datenaustausch anzeigen</em>.</p></li>
 </ol>
 </div>
@@ -390,6 +554,9 @@ Du kannst Filius kostenlos unter <a class="reference external" href="https://www
 <p><a href="http://www.youtube.com/watch?feature=player_embedded&v=y6GRa4skFtU
 " target="_blank"><img src="http://img.youtube.com/vi/y6GRa4skFtU/0.jpg" 
 alt="Ping" width="800" border="10" /></a></p>
+<blockquote>
+<div><p>Schicke eine Nachricht und beobachte im Datenaustausch-Fenster was passiert.</p>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="switch-und-webserver-software">
@@ -437,14 +604,74 @@ anschließend.</p></li>
 <p>Die Webseite gefällt dir nicht, deshalb möchtest du Änderungen daran vornehmen.
 Hierzu musst du vorher aber noch einige Arbeitsschritte ausführen.</p>
 <div class="section" id="id3">
-<h4>Entwurfsmodus<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<h4>Aktionsmodus<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <ol class="simple">
 <li><p>Installiere auf <em>Webserver_12</em> den <em>“Text-Editor”</em>.</p></li>
 <li><p>Öffne den <em>“Text-Editor”</em>. Klicke auf <em>“Datei” -&gt; “Öffnen”</em> und wähle im Ordner <em>“webserver”</em> die Datei <em>“index.html”</em> aus. Hinweis: <em>“index.html”</em> muss im Feld <em>“Dateiname”</em> stehen, dann auf <em>“Öffnen”</em> klicken.</p></li>
 <li><p>Die Homepage soll als <em>“Titel”</em> deine Namen erhalten. Ändere den Titel indem du den Begriff <em>“Standardseite”</em> durch deinen Namen ersetzt. <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;Standardseite&lt;/title&gt;</span></code>wird geändert in z.B. <code class="docutils literal notranslate"><span class="pre">&lt;title&gt;Tom</span> <span class="pre">Tubeless</span> <span class="pre">Homepage&lt;/title&gt;</span></code>. Klicke anschließend auf <em>“Datei” -&gt; “Speichern”</em> und überprüfe deine Änderung im <em>Webbrowser</em> von <em>Client_10</em> oder <em>Client_11</em> (Hinweis: Adresse lautet <em>192.168.0.12</em>).</p></li>
 <li><p>Ändere die Überschrift ebenfalls ab. Ersetze <em>“Filius”</em> durch deinen Namen. <code class="docutils literal notranslate"><span class="pre">&lt;h2&gt;FILIUS</span> <span class="pre">-</span> <span class="pre">Webserver&lt;/h2&gt;</span></code> wird geändert in z.B. <code class="docutils literal notranslate"><span class="pre">&lt;h2&gt;Tubeless</span> <span class="pre">Webserver&lt;/h2&gt;</span></code>. Klicke anschließend auf <em>“Datei” -&gt; “Speichern”</em> und überprüfe deine Änderung im <em>Webbrowser</em> von <em>Client_10</em> oder <em>Client_11</em>.</p></li>
-<li><p>Installiere auf <em>Webserver_12</em> die Software <em>“Datei-Explorer”</em> und ändere das Bild der Homepage. Probiere es erst selbstständig, bevor du eine Lösung recherchierst.</p></li>
 </ol>
+<blockquote>
+<div><p>Wenn die Übung 3 für dich kein Problem war, dann darfst du gerne auch das Bild auf der Homepage ändern.</p>
+</div></blockquote>
+<ol class="simple">
+<li><p>Installiere auf <em>Webserver_12</em> die Software <em>“Datei-Explorer”</em> und ändere das Bild der Homepage. Probiere es erst selbstständig, bevor du eine Lösung recherchierst. <span id="id4">[<a class="reference internal" href="#id11">2</a>]</span></p></li>
+</ol>
+<blockquote>
+<div><p>An den grün blinkenden Kabeln kann man den Netzwerkverkehr sehr gut erkennen!</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+<div class="section" id="nameserver-dns">
+<h2><span class="section-number">2.4. </span>Nameserver (DNS)<a class="headerlink" href="#nameserver-dns" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ubung-4">
+<h3>Übung 4<a class="headerlink" href="#ubung-4" title="Permalink to this headline">¶</a></h3>
+<p>Wenn du im Internet unterwegs bist, rufst du die Seiten nicht über die IP-Adresse auf, sondern du gibst einen Namen ein -&gt; z.B. <a class="reference external" href="http://www.google.de">www.google.de</a>.
+Dies richtest du jetzt für deine geänderte Homepage ein.</p>
+<div class="section" id="id5">
+<h4>Entwurfsmodus<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Erweitere dein Netzwerk um einen Server (Name: <em>Nameserver_13</em>; IP-Adresse: <em>192.168.0.13</em>).</p></li>
+<li><p>Verbinde den <em>Nameserver_13</em> mit dem Switch.</p></li>
+</ol>
+</div>
+<div class="section" id="id6">
+<h4>Aktionsmodus<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Installiere auf <em>Nameserver_13</em> die Software <em>“DNS-Server”</em>.</p></li>
+<li><p>Öffne die Software <em>“DNS-Server”</em> und fülle die Felder wie folgt aus:</p>
+<ol class="simple">
+<li><p>Domainname: <em><a class="reference external" href="http://www.server-management.de">www.server-management.de</a></em></p></li>
+<li><p>IP-Adresse: <em>192.168.0.12</em></p></li>
+</ol>
+</li>
+<li><p>Klicke danach auf <em>“Hinzufügen”</em> und anschließend auf <em>“Starten”</em>.</p></li>
+</ol>
+</div>
+<div class="section" id="id7">
+<h4>Entwurfsmodus<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Nun musst du an deinen Clients und Servern noch Einstellungen vornehmen. Gebe bei allen Geräten unter <em>“Domain Name Server”</em> folgende IP-Adresse ein: <em>192.168.0.13</em>.</p></li>
+</ol>
+</div>
+<div class="section" id="id8">
+<h4>Aktionsmodus<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Jetzt kannst du testen, ob deine Homepage unter der Adresse <em><a class="reference external" href="http://www.server-management.de">www.server-management.de</a></em> erreichbar ist. Öffne dazu in <em>Client_10</em> oder <em>Client_11</em> deinen Webbrowser und gebe die Adresse ein.</p></li>
+</ol>
+<blockquote>
+<div><p>Wenn deine Homepage erscheint hast du alles richtig gemacht. Falls die Meldung “Server konnte nicht erreicht werden!” angezeigt wird, hast du vermutlich den “DNS-Server” nicht gestartet.</p>
+</div></blockquote>
+<p id="id9"><dl class="citation">
+<dt class="label" id="id12"><span class="brackets">1</span></dt>
+<dd><p>Timothy B. Lee. The internet, explained. <span><a class="reference external" href="#"></a></span>https://www.vox.com/2014/6/16/18076282/the-internet, 2015. Accessed: 2021-09-14.</p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dd><p>W3Schools. Html images. <span><a class="reference external" href="#"></a></span>https://www.w3schools.com/html/html_images.asp, 2022. Accessed: 2022-01-21.</p>
+</dd>
+</dl>
+</p>
 </div>
 </div>
 </div>
@@ -472,45 +699,35 @@ Hierzu musst du vorher aber noch einige Arbeitsschritte ausführen.</p>
 
               </div>
               
-        
             
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="001_internet.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">1. </span>Das Internet</p>
-            </div>
-        </a>
-    </div>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="001_internet.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Das Internet</p>
+        </div>
+    </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          Durch Lutz Tomala<br/>
-        
-            &copy; Urheberrechte © MIT License Copyright (c) 2021 Lutz Tomala.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      Durch Lutz Tomala<br/>
+    
+        &copy; Urheberrechte © MIT License Copyright (c) 2021 Lutz Tomala.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

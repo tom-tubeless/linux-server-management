@@ -8,7 +8,7 @@
 # Den Netzwerksimulator Filius gibt es für Windows, OSX und Linux.
 # Du kannst Filius kostenlos unter [https://www.lernsoftware-filius.de](https://www.lernsoftware-filius.de) herunterladen und installieren.
 # 
-# ## Tipps beim Umgang mit Filius kont
+# ## Tipps beim Umgang mit Filius
 # 
 # - Achte darauf, ob du die Arbeitsschritte im Entwurfsmodus ![](img/filius_entwurfsmodus.png) oder Aktionsmodus ![](img/filius_aktionsmodus.png) durchführen musst.
 # 
@@ -33,12 +33,12 @@
 # #### Entwurfsmodus
 # 
 # 1. Erstelle ein Netzwerk mit zwei vernetzten Clients („normale“ Rechner)
-# 2. Ändere Die Namen der Notebooks auf _Client_1_10_ und _Client_2_10_.
+# 2. Ändere Die Namen der Notebooks auf _Client_10_ und _Client_20_.
 # 
 # #### Aktionsmodus
 # 
 # 3. Installiere auf _Client_1_10_ die _Befehlszeilenkonsole_
-# 4. Öffne die Befehlszeilenkonsole und trage folgenden Befehl ein: `ping 192.168.0.10`.
+# 4. Öffne die Befehlszeilenkonsole und trage folgenden Befehl ein: `ping 192.168.0.20`.
 # 5. Öffne mit einem Rechtsklick auf den entsprechenden Clienten _Datenaustausch anzeigen_.
 # 
 # #### Fragen
@@ -56,6 +56,8 @@
 # <a href="http://www.youtube.com/watch?feature=player_embedded&v=y6GRa4skFtU
 # " target="_blank"><img src="http://img.youtube.com/vi/y6GRa4skFtU/0.jpg" 
 # alt="Ping" width="800" border="10" /></a>
+# 
+# > Schicke eine Nachricht und beobachte im Datenaustausch-Fenster was passiert.
 # 
 # ## Switch und Webserver-Software
 # 
@@ -86,10 +88,45 @@
 # Die Webseite gefällt dir nicht, deshalb möchtest du Änderungen daran vornehmen.
 # Hierzu musst du vorher aber noch einige Arbeitsschritte ausführen.
 # 
-# #### Entwurfsmodus
+# #### Aktionsmodus
 # 
 # 1. Installiere auf _Webserver_12_ den _"Text-Editor"_.
 # 2. Öffne den _"Text-Editor"_. Klicke auf _"Datei" -> "Öffnen"_ und wähle im Ordner _"webserver"_ die Datei _"index.html"_ aus. Hinweis: _"index.html"_ muss im Feld _"Dateiname"_ stehen, dann auf _"Öffnen"_ klicken.
 # 3. Die Homepage soll als _"Titel"_ deine Namen erhalten. Ändere den Titel indem du den Begriff _"Standardseite"_ durch deinen Namen ersetzt. `<title>Standardseite</title>`wird geändert in z.B. `<title>Tom Tubeless Homepage</title>`. Klicke anschließend auf _"Datei" -> "Speichern"_ und überprüfe deine Änderung im _Webbrowser_ von _Client_10_ oder _Client_11_ (Hinweis: Adresse lautet _192.168.0.12_).
 # 4. Ändere die Überschrift ebenfalls ab. Ersetze _"Filius"_ durch deinen Namen. `<h2>FILIUS - Webserver</h2>` wird geändert in z.B. `<h2>Tubeless Webserver</h2>`. Klicke anschließend auf _"Datei" -> "Speichern"_ und überprüfe deine Änderung im _Webbrowser_ von _Client_10_ oder _Client_11_.
-# 5. Installiere auf _Webserver_12_ die Software _"Datei-Explorer"_ und ändere das Bild der Homepage. Probiere es erst selbstständig, bevor du eine Lösung recherchierst.
+# 
+# > Wenn die Übung 3 für dich kein Problem war, dann darfst du gerne auch das Bild auf der Homepage ändern.
+# 
+# 5. Installiere auf _Webserver_12_ die Software _"Datei-Explorer"_ und ändere das Bild der Homepage. Probiere es erst selbstständig, bevor du eine Lösung recherchierst. {cite:ps}`img2022`
+# 
+# > An den grün blinkenden Kabeln kann man den Netzwerkverkehr sehr gut erkennen!
+# 
+# 
+# ## Nameserver (DNS)
+# ### Übung 4
+# Wenn du im Internet unterwegs bist, rufst du die Seiten nicht über die IP-Adresse auf, sondern du gibst einen Namen ein -> z.B. www.google.de.
+# Dies richtest du jetzt für deine geänderte Homepage ein.
+# 
+# #### Entwurfsmodus
+# 
+# 1. Erweitere dein Netzwerk um einen Server (Name: _Nameserver_13_; IP-Adresse: _192.168.0.13_).
+# 2. Verbinde den _Nameserver_13_ mit dem Switch.
+# 
+# #### Aktionsmodus
+# 1. Installiere auf _Nameserver_13_ die Software _"DNS-Server"_.
+# 2. Öffne die Software _"DNS-Server"_ und fülle die Felder wie folgt aus:
+#    1. Domainname: _www.server-management.de_
+#    2. IP-Adresse: _192.168.0.12_
+# 3. Klicke danach auf _"Hinzufügen"_ und anschließend auf _"Starten"_.
+# 
+# #### Entwurfsmodus
+# 1. Nun musst du an deinen Clients und Servern noch Einstellungen vornehmen. Gebe bei allen Geräten unter _"Domain Name Server"_ folgende IP-Adresse ein: _192.168.0.13_.
+# 
+# #### Aktionsmodus
+# 1. Jetzt kannst du testen, ob deine Homepage unter der Adresse _www.server-management.de_ erreichbar ist. Öffne dazu in _Client_10_ oder _Client_11_ deinen Webbrowser und gebe die Adresse ein.
+# 
+# > Wenn deine Homepage erscheint hast du alles richtig gemacht. Falls die Meldung "Server konnte nicht erreicht werden!" angezeigt wird, hast du vermutlich den "DNS-Server" nicht gestartet.
+# 
+# ```{bibliography}
+# :style: plain
+# ```
