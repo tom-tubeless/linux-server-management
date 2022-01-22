@@ -113,6 +113,10 @@ Hierzu musst du vorher aber noch einige Arbeitsschritte ausführen.
 
 
 ## Nameserver (DNS)
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=kOQVqQUqorU
+" target="_blank"><img src="http://img.youtube.com/vi/kOQVqQUqorU/0.jpg" 
+alt="#23 DNS Server - einfach und schnell erklärt!" width="800" border="10" /></a>
 ### Übung 4
 Wenn du im Internet unterwegs bist, rufst du die Seiten nicht über die IP-Adresse auf, sondern du gibst einen Namen ein -> z.B. www.google.de.
 Dies richtest du jetzt für deine geänderte Homepage ein.
@@ -138,6 +142,10 @@ Dies richtest du jetzt für deine geänderte Homepage ein.
 > Wenn deine Homepage erscheint hast du alles richtig gemacht. Falls die Meldung "Server konnte nicht erreicht werden!" angezeigt wird, hast du vermutlich den "DNS-Server" nicht gestartet.
 
 ## Mailserver
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=byJk8lr0j9s
+" target="_blank"><img src="http://img.youtube.com/vi/byJk8lr0j9s/0.jpg" 
+alt="So funktioniert Email - auf den Punkt gebracht" width="800" border="10" /></a>
 
 ### Übung 5
 Deine Rechner sind vernetzt, deine Homepage ist erreichbar, dann wird es Zeit für E-Mails.
