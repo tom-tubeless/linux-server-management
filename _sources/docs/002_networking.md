@@ -237,6 +237,14 @@ Du kannst es dir ungefähr so vorstellen: Dein Laptop, Playstation, Smartphone, 
 > Hast du eine Idee, weshalb du die Homepage über die IP-Adresse erreichst, aber nicht über die URL ([http://www.server-management.de](http://www.server-management.de))?
 
 
+<!-- ## Mailserver im zweiten Netzwerk
+
+### Übung 7
+
+#### Aktionsmodus
+1. Installiere auf `Server_Mail_DHCP_10` das Programm "E-Mail-Server" und nehme darin folgende Einstellungen vor:
+   1. Maildomain: `linux.de` -->
+
 ```{bibliography}
 :style: plain
 ```
