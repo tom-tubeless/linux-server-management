@@ -203,8 +203,28 @@
 # 
 # > Recherchiere die grundlegenden Protokolle für den E-Mail-Verkehr (z. B. POP3, SMTP). {cite:ps}`mailserver2022`
 # 
-# <!-- ## Zwei Netzwerke miteinander verbinden -->
+# ## Zwei Netzwerke miteinander verbinden
 # 
+# ### Übung 6
+# Jetzt wird es spannend.
+# Dein kleines Netzwerk soll nun mit einem anderen Netzwerk verbunden werden.
+# Du kannst es dir ungefähr so vorstellen: Dein Laptop, Playstation, Smartphone, usw. sollen über dein WLan mit dem Internet verbunden werden.
+# 
+# #### Entwurfsmodus
+# 1. Baue ein weiteres Netzwerk auf. Verbinde dazu einen neuen Rechner mit einem neuen Switch:
+#    1. Name: `Server_Mail_DHCP_10`
+#    2. IP-Adresse: `10.1.1.10`
+# 2. Verbinde die beiden Switches mit Hilfe eines Routers (Vermittlungsrechner). Der Router benötigt zwei Anschlüsse.
+# 3. Ändere die Daten des Routers folgendermaßen:
+#    1. Name: `Router`
+#    2. IP-Adresse Anschluss 1: `192.168.0.1`
+#    3. IP-Adresse Anschluss 2: `10.1.1.1`
+# 4. Überprüfe alle deine Server und Clients. Hat das Gerät eine IP-Adresse, welche mit `192.168.0.` beginnt, dann trage als Gateway `192.168.0.1` ein. Hat das Gerät eine IP-Adresse, welche mit `10.1.1.` beginnt, dann trage als Gateway `10.1.1.1` ein.
+# 
+# #### Aktionsmodus
+# 1. Installiere auf `Server_Mail_DHCP_10` den "Webbrowser". Versuche im Webbrowser die Seite [http://www.server-management.de](http://www.server-management.de) zu erreichen. Falls sich die Seite nicht öffnet, versuche es mit der IP-Adresse des `Webserver_12`. Sprich [http://192.168.0.12](http://192.168.0.12).
+# 
+# > Hast du eine Idee, weshalb du die Homepage über die IP-Adresse erreichst, aber nicht über die URL ([http://www.server-management.de](http://www.server-management.de))?
 # 
 # 
 # ```{bibliography}

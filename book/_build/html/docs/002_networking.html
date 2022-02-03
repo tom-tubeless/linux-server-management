@@ -388,6 +388,30 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zwei-netzwerke-miteinander-verbinden">
+   2.6. Zwei Netzwerke miteinander verbinden
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-6">
+     Übung 6
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id15">
+       Entwurfsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id16">
+       Aktionsmodus
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -546,6 +570,30 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#zwei-netzwerke-miteinander-verbinden">
+   2.6. Zwei Netzwerke miteinander verbinden
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubung-6">
+     Übung 6
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id15">
+       Entwurfsmodus
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id16">
+       Aktionsmodus
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
 </ul>
 
                         </nav>
@@ -673,7 +721,7 @@ Hierzu musst du vorher aber noch einige Arbeitsschritte ausführen.</p>
 <div><p>Wenn die Übung 3 für dich kein Problem war, dann darfst du gerne auch das Bild auf der Homepage ändern.</p>
 </div></blockquote>
 <ol class="simple">
-<li><p>Installiere auf <em>Webserver_12</em> die Software <em>“Datei-Explorer”</em> und ändere das Bild der Homepage. Probiere es erst selbstständig, bevor du eine Lösung recherchierst. <span id="id4">[<a class="reference internal" href="#id18">2</a>]</span></p></li>
+<li><p>Installiere auf <em>Webserver_12</em> die Software <em>“Datei-Explorer”</em> und ändere das Bild der Homepage. Probiere es erst selbstständig, bevor du eine Lösung recherchierst. <span id="id4">[<a class="reference internal" href="#id20">2</a>]</span></p></li>
 </ol>
 <blockquote>
 <div><p>An den grün blinkenden Kabeln kann man den Netzwerkverkehr sehr gut erkennen!</p>
@@ -769,7 +817,7 @@ alt="So funktioniert Email - auf den Punkt gebracht" width="800" border="10" /><
 <li><p>Starte den E-Mail-Server.</p></li>
 </ol>
 <blockquote>
-<div><p>Alan und Grace? Wenn du Zeit hast, recherchiere nach Grace Hopper <span id="id11">[<a class="reference internal" href="#id16">4</a>]</span> und Alan Turing <span id="id12">[<a class="reference internal" href="#id27">3</a>]</span>.</p>
+<div><p>Alan und Grace? Wenn du Zeit hast, recherchiere nach Grace Hopper <span id="id11">[<a class="reference internal" href="#id18">4</a>]</span> und Alan Turing <span id="id12">[<a class="reference internal" href="#id29">3</a>]</span>.</p>
 </div></blockquote>
 </div>
 <div class="section" id="id13">
@@ -816,23 +864,60 @@ folgende Einstellungen vor:</p></li>
 <li><p>Wechsle wieder zu <em>Client_10</em> und rufe deine E-Mails ab. Die Antwort von Alan müsste angekommen sein.</p></li>
 </ol>
 <blockquote>
-<div><p>Recherchiere die grundlegenden Protokolle für den E-Mail-Verkehr (z. B. POP3, SMTP). <span id="id14">[<a class="reference internal" href="#id20">5</a>]</span></p>
+<div><p>Recherchiere die grundlegenden Protokolle für den E-Mail-Verkehr (z. B. POP3, SMTP). <span id="id14">[<a class="reference internal" href="#id22">5</a>]</span></p>
 </div></blockquote>
-<!-- ## Zwei Netzwerke miteinander verbinden -->
-<p id="id15"><dl class="citation">
-<dt class="label" id="id19"><span class="brackets">1</span></dt>
+</div>
+</div>
+</div>
+<div class="section" id="zwei-netzwerke-miteinander-verbinden">
+<h2><span class="section-number">2.6. </span>Zwei Netzwerke miteinander verbinden<a class="headerlink" href="#zwei-netzwerke-miteinander-verbinden" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ubung-6">
+<h3>Übung 6<a class="headerlink" href="#ubung-6" title="Permalink to this headline">¶</a></h3>
+<p>Jetzt wird es spannend.
+Dein kleines Netzwerk soll nun mit einem anderen Netzwerk verbunden werden.
+Du kannst es dir ungefähr so vorstellen: Dein Laptop, Playstation, Smartphone, usw. sollen über dein WLan mit dem Internet verbunden werden.</p>
+<div class="section" id="id15">
+<h4>Entwurfsmodus<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Baue ein weiteres Netzwerk auf. Verbinde dazu einen neuen Rechner mit einem neuen Switch:</p>
+<ol class="simple">
+<li><p>Name: <code class="docutils literal notranslate"><span class="pre">Server_Mail_DHCP_10</span></code></p></li>
+<li><p>IP-Adresse: <code class="docutils literal notranslate"><span class="pre">10.1.1.10</span></code></p></li>
+</ol>
+</li>
+<li><p>Verbinde die beiden Switches mit Hilfe eines Routers (Vermittlungsrechner). Der Router benötigt zwei Anschlüsse.</p></li>
+<li><p>Ändere die Daten des Routers folgendermaßen:</p>
+<ol class="simple">
+<li><p>Name: <code class="docutils literal notranslate"><span class="pre">Router</span></code></p></li>
+<li><p>IP-Adresse Anschluss 1: <code class="docutils literal notranslate"><span class="pre">192.168.0.1</span></code></p></li>
+<li><p>IP-Adresse Anschluss 2: <code class="docutils literal notranslate"><span class="pre">10.1.1.1</span></code></p></li>
+</ol>
+</li>
+<li><p>Überprüfe alle deine Server und Clients. Hat das Gerät eine IP-Adresse, welche mit <code class="docutils literal notranslate"><span class="pre">192.168.0.</span></code> beginnt, dann trage als Gateway <code class="docutils literal notranslate"><span class="pre">192.168.0.1</span></code> ein. Hat das Gerät eine IP-Adresse, welche mit <code class="docutils literal notranslate"><span class="pre">10.1.1.</span></code> beginnt, dann trage als Gateway <code class="docutils literal notranslate"><span class="pre">10.1.1.1</span></code> ein.</p></li>
+</ol>
+</div>
+<div class="section" id="id16">
+<h4>Aktionsmodus<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Installiere auf <code class="docutils literal notranslate"><span class="pre">Server_Mail_DHCP_10</span></code> den “Webbrowser”. Versuche im Webbrowser die Seite <a class="reference external" href="http://www.server-management.de">http://www.server-management.de</a> zu erreichen. Falls sich die Seite nicht öffnet, versuche es mit der IP-Adresse des <code class="docutils literal notranslate"><span class="pre">Webserver_12</span></code>. Sprich <a class="reference external" href="http://192.168.0.12">http://192.168.0.12</a>.</p></li>
+</ol>
+<blockquote>
+<div><p>Hast du eine Idee, weshalb du die Homepage über die IP-Adresse erreichst, aber nicht über die URL (<a class="reference external" href="http://www.server-management.de">http://www.server-management.de</a>)?</p>
+</div></blockquote>
+<p id="id17"><dl class="citation">
+<dt class="label" id="id21"><span class="brackets">1</span></dt>
 <dd><p>Timothy B. Lee. The internet, explained. <span><a class="reference external" href="#"></a></span>https://www.vox.com/2014/6/16/18076282/the-internet, 2015. Accessed: 2021-09-14.</p>
 </dd>
-<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
 <dd><p>W3Schools. Html images. <span><a class="reference external" href="#"></a></span>https://www.w3schools.com/html/html_images.asp, 2022. Accessed: 2022-01-21.</p>
 </dd>
-<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id12">3</a></span></dt>
+<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id12">3</a></span></dt>
 <dd><p>Wikipedia. Wikipedia: alan turing. <span><a class="reference external" href="#"></a></span>https://de.wikipedia.org/wiki/Alan_Turing, 2022. Accessed: 2022-01-21.</p>
 </dd>
-<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id11">4</a></span></dt>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id11">4</a></span></dt>
 <dd><p>Wikipedia. Wikipedia: grace hopper. <span><a class="reference external" href="#"></a></span>https://de.wikipedia.org/wiki/Grace_Hopper, 2022. Accessed: 2022-01-21.</p>
 </dd>
-<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id14">5</a></span></dt>
+<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id14">5</a></span></dt>
 <dd><p>Wikipedia. Wikipedia: mailserver. <span><a class="reference external" href="#"></a></span>https://de.wikipedia.org/wiki/Mailserver, 2022. Accessed: 2022-01-22.</p>
 </dd>
 </dl>
