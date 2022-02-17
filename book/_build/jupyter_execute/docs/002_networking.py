@@ -33,11 +33,11 @@
 # #### Entwurfsmodus
 # 
 # 1. Erstelle ein Netzwerk mit zwei vernetzten Clients („normale“ Rechner)
-# 2. Ändere Die Namen der Notebooks auf _Client_10_ und _Client_20_.
+# 2. Ändere Die Namen der Notebooks auf `Client_10` und `Client_20`.
 # 
 # #### Aktionsmodus
 # 
-# 3. Installiere auf _Client_1_10_ die _Befehlszeilenkonsole_
+# 3. Installiere auf `Client_10` die _Befehlszeilenkonsole_
 # 4. Öffne die Befehlszeilenkonsole und trage folgenden Befehl ein: `ping 192.168.0.20`.
 # 5. Öffne mit einem Rechtsklick auf den entsprechenden Clienten _Datenaustausch anzeigen_.
 # 
@@ -46,8 +46,8 @@
 # 1. Was beobachtest du, wenn du dir die Befehlszeilenkonsole und die Datenaustausch-Fenster (Protokolle) beider Clients anschaust?
 # 2. Wieviele Pakete werden verschickt?
 # 3. Wieviele Pakete werden empfangen?
-# 4. Was ist im Datenaustausch-Fenster von Client 1_10 passiert?
-# 5. Was ist im Datenaustausch-Fenster von Client 2_10 passiert?
+# 4. Was ist im Datenaustausch-Fenster von `Client_10` passiert?
+# 5. Was ist im Datenaustausch-Fenster von `Client_20` passiert?
 # 
 # ### Ping erklärt
 # 
@@ -77,9 +77,9 @@
 # 
 # #### Aktionsmodus
 # 
-# 3. Installiere auf dem _Webserver_12_ die Software _"Webserver"_ und starte ihn
+# 3. Installiere auf dem `Webserver_12` die Software _"Webserver"_ und starte ihn
 #    anschließend.
-# 4. Installiere auf beiden _Clients_ einen _"Webbrowser"_.
+# 4. Installiere auf beiden *Clients* einen _"Webbrowser"_.
 # 5. Du möchtest nun die Webseite des _Webservers_ aufrufen. Öffne dazu den _Webbrowser_ deines _Clients_ und trage in die Adresszeile die _IP-Adresse_ des _Webservers_ ein (siehe Tabelle).
 # 6. Hat alles geklappt? Dann mache mit Übung 3 weiter.
 # 
@@ -176,7 +176,7 @@
 # 3. Öffne auf _Client_11_ das _"E-Mail-Programm"_ und klicke auf _"Konto einrichten"_. Nehme
 # folgende Einstellungen vor:
 #   1. Name: `Alan Turing`
-#   2. E-Mail-Adresse: `turing@server-management.de`
+#   2. E-Mail-Adresse: `alan@server-management.de`
 #   3. POP3-Server: `mail.server-management.de`
 #   4. POP3-Port: `110`
 #   5. SMTP-Server: `mail.server-management.de`
@@ -227,13 +227,40 @@
 # > Hast du eine Idee, weshalb du die Homepage über die IP-Adresse erreichst, aber nicht über die URL ([http://www.server-management.de](http://www.server-management.de))?
 # 
 # 
-# <!-- ## Mailserver im zweiten Netzwerk
+# ## Mailserver im zweiten Netzwerk
 # 
 # ### Übung 7
 # 
 # #### Aktionsmodus
-# 1. Installiere auf `Server_Mail_DHCP_10` das Programm "E-Mail-Server" und nehme darin folgende Einstellungen vor:
-#    1. Maildomain: `linux.de` -->
+# 1. Installiere auf `Server_Mail_DHCP_10` das Programm _"E-Mail-Server"_ und nehme darin folgende Einstellungen vor:
+#    1. Maildomain: `linux.de`
+#    2. Erstelle ein E-Mail-Konto:
+#       1. Benutzername: `sinus`
+#       2. Passwort: `12345`
+#       3. Konto erstellen
+#    3. Starte den E-Mail-Server.
+#    4. Nun musst du den `Nameserver_13` konfigurieren. Öffne das Programm _„DNS-Server“_.
+#    5. Nehme unter _„Adressen“_ folgende Einstellungen vor:
+#       1. Domainname: `mail.linux.de`
+#       2. IP-Adresse: `10.1.1.10`
+#       3. Klicke anschließend auf _„Hinzufügen“_.
+#    6. Klicke auf _„Mailaustausch (MX)“_ und nehme folgende Einstellungen vor:
+#       1. Maildomain: `linux.de`
+#       2. Domainname Mailserver: `mail.linux.de`
+#       3. Klicke anschließend auf _„Hinzufügen“_.
+#    7. Installiere auf `Server_Mail_DHCP_10` das _„E-Mail-Programm“_ und richte das E-Mail-Konto von Benutzer Sinus ein.
+#       1. Name: `Sinus`
+#       2. E-Mail-Adresse: `sinus@linux.de`
+#       3. POP3-Server: `mail.linux.de`
+#       4. POP3-Port: 110
+#       5. SMTP-Server: `mail.linux.de`
+#       6. SMTP-Port: 25
+#       7. Benutzername: `sinus`
+#       8. Passwort: `12345`
+# 
+# Schreibe eine E-Mail von Sinus an die Adresse `alan@server-management.de` und überprüfe ob die Mail ankommt.
+# 
+# > Auch hier kommt die Mail nicht bei Alan an. Finde die fehlende Einstellung und behebe sie.
 # 
 # ```{bibliography}
 # :style: plain
