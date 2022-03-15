@@ -272,6 +272,30 @@ Schreibe eine E-Mail von Sinus an die Adresse `alan@server-management.de` und ü
 
 > Auch hier kommt die Mail nicht bei Alan an. Finde die fehlende Einstellung und behebe sie.
 
+## DHCP-Server
+
+### Übung 8
+In einem großen Netzwerk ist es sehr geschickt, wenn die IP-Adressen automatisch vergeben werden.
+Diese Aufgabe übernimmt der [DHCP-Server](https://de.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol).
+Alle Rechner, welche nun zusätzlich im Netzwerk 10.1.1.x angemeldet werden, sollen ihre IP-Adresse per DHCP erhalten.
+
+#### Entwurfsmodus
+1. Wähle den Rechner `Server_Mail_DHCP_10` aus und klicke auf *DHCP-Server einrichten*.
+2. Konfiguriere den DHCP-Server folgendermaßen:
+   1. Adress-Untergrenze: `1.1.1.20`
+   2. Adress-Obergrenze: `10.1.1.100`
+   3. Netzmaske: `255.255.255.0`
+   4. Gateway: `10.1.1.1`
+   5. DNS-Server: `192.168.0.13`
+   6. DHCP aktivieren und mit *OK* bestätigen.
+3. Schließe zwei Clients an den Switch vom Netzwerk mit `Server_Mail_DHCP_10` an.
+4. Setze in den Einstellungen der zwei neuen Clients die Haken bei:
+   1. *IP-Adresse als Name verwenden*
+   2. *DHCP zur Konfiguration verwenden*
+
+> Starte die Simulation und schaue was bei den zwei neuen Clients passiert.
+
+
 ```{bibliography}
 :style: plain
 ```
