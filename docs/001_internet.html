@@ -37,9 +37,12 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script kind="utterances">
 
     var commentsRunWhenDOMLoaded = cb => {
@@ -76,12 +79,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -120,7 +122,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Dieses Buch durchsuchen ..." aria-label="Dieses Buch durchsuchen ..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -166,8 +168,8 @@ commentsRunWhenDOMLoaded(addUtterances);
             
             <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
                 data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Navigation umschalten" aria-controls="site-navigation"
-                title="Navigation umschalten" data-toggle="tooltip" data-placement="left">
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-arrow-left"></i>
                 <i class="fas fa-arrow-up"></i>
@@ -175,21 +177,21 @@ commentsRunWhenDOMLoaded(addUtterances);
             
             
 <div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Laden Sie diese Seite herunter"><i
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         <a class="dropdown-buttons"
             href="../_sources/docs/001_internet.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Notebook-Datei herunterladen" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/docs/001_internet.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Quelldatei herunterladen" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="In PDF drucken"
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
@@ -202,12 +204,12 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
             href="https://github.com/tom-tubeless/linux-server-management"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Quell-Repository"><i
-                    class="fab fa-github"></i>Repository</button></a>
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
             href="https://github.com/tom-tubeless/linux-server-management/issues/new?title=Issue%20on%20page%20%2Fdocs/001_internet.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Öffnen Sie ein Problem"><i class="fas fa-lightbulb"></i>offenes Thema</button></a>
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
     </div>
 </div>
@@ -215,8 +217,8 @@ commentsRunWhenDOMLoaded(addUtterances);
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Vollbildmodus"
-        title="Vollbildmodus"><i
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
@@ -227,7 +229,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="dropdown-buttons">
         
         <a class="binder-button" href="https://mybinder.org/v2/gh/tom-tubeless/linux-server-management/main?urlpath=lab/tree/book/docs/001_internet.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Starten Binder" data-toggle="tooltip"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
@@ -235,7 +237,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         
         <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Starten Thebe" data-toggle="tooltip" data-placement="left"><i
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
                 class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
@@ -247,7 +249,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Inhalt
+                <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
@@ -322,7 +324,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <div id="jb-print-toc">
                         
                         <div>
-                            <h2> Inhalt </h2>
+                            <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
@@ -392,7 +394,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="das-internet">
 <h1><span class="section-number">1. </span>Das Internet<a class="headerlink" href="#das-internet" title="Permalink to this headline">¶</a></h1>
-<p>Nach <span id="id1">[<a class="reference internal" href="002_networking.html#id22">1</a>]</span></p>
+<p>Nach <span id="id1">[<a class="reference internal" href="002_networking.html#id23" title="Timothy B. Lee. The internet, explained. \url https://www.vox.com/2014/6/16/18076282/the-internet, 2015. Accessed: 2021-09-14.">1</a>]</span></p>
 <div class="section" id="was-ist-das-internet">
 <h2><span class="section-number">1.1. </span>Was ist das Internet?<a class="headerlink" href="#was-ist-das-internet" title="Permalink to this headline">¶</a></h2>
 <p>Das Internet ist das beliebteste Computernetz der Welt.
@@ -523,19 +525,19 @@ Sowohl Kriminelle als auch Regierungsspione haben versucht, DNS zu kompromittier
 Ein Standard namens DNSSEC versucht, die DNS-Sicherheit durch Verschlüsselung zu verbessern, aber nur wenige Menschen haben ihn übernommen.</p>
 <p id="id2"><dl class="citation">
 <dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Timothy B. Lee. The internet, explained. <span><a class="reference external" href="#"></a></span>https://www.vox.com/2014/6/16/18076282/the-internet, 2015. Accessed: 2021-09-14.</p>
+<dd><p>Timothy B. Lee. The internet, explained. <a class="reference external" href="https://www.vox.com/2014/6/16/18076282/the-internet">https://www.vox.com/2014/6/16/18076282/the-internet</a>, 2015. Accessed: 2021-09-14.</p>
 </dd>
 <dt class="label" id="id5"><span class="brackets">2</span></dt>
-<dd><p>W3Schools. Html images. <span><a class="reference external" href="#"></a></span>https://www.w3schools.com/html/html_images.asp, 2022. Accessed: 2022-01-21.</p>
+<dd><p>W3Schools. Html images. <a class="reference external" href="https://www.w3schools.com/html/html_images.asp">https://www.w3schools.com/html/html_images.asp</a>, 2022. Accessed: 2022-01-21.</p>
 </dd>
 <dt class="label" id="id14"><span class="brackets">3</span></dt>
-<dd><p>Wikipedia. Wikipedia: alan turing. <span><a class="reference external" href="#"></a></span>https://de.wikipedia.org/wiki/Alan_Turing, 2022. Accessed: 2022-01-21.</p>
+<dd><p>Wikipedia. Wikipedia: alan turing. <a class="reference external" href="https://de.wikipedia.org/wiki/Alan_Turing">https://de.wikipedia.org/wiki/Alan_Turing</a>, 2022. Accessed: 2022-01-21.</p>
 </dd>
 <dt class="label" id="id3"><span class="brackets">4</span></dt>
-<dd><p>Wikipedia. Wikipedia: grace hopper. <span><a class="reference external" href="#"></a></span>https://de.wikipedia.org/wiki/Grace_Hopper, 2022. Accessed: 2022-01-21.</p>
+<dd><p>Wikipedia. Wikipedia: grace hopper. <a class="reference external" href="https://de.wikipedia.org/wiki/Grace_Hopper">https://de.wikipedia.org/wiki/Grace_Hopper</a>, 2022. Accessed: 2022-01-21.</p>
 </dd>
 <dt class="label" id="id7"><span class="brackets">5</span></dt>
-<dd><p>Wikipedia. Wikipedia: mailserver. <span><a class="reference external" href="#"></a></span>https://de.wikipedia.org/wiki/Mailserver, 2022. Accessed: 2022-01-22.</p>
+<dd><p>Wikipedia. Wikipedia: mailserver. <a class="reference external" href="https://de.wikipedia.org/wiki/Mailserver">https://de.wikipedia.org/wiki/Mailserver</a>, 2022. Accessed: 2022-01-22.</p>
 </dd>
 </dl>
 </p>
@@ -588,9 +590,9 @@ Ein Standard namens DNSSEC versucht, die DNS-Sicherheit durch Verschlüsselung z
     <footer class="footer">
   <p>
     
-      Durch Lutz Tomala<br/>
+      By Lutz Tomala<br/>
     
-        &copy; Urheberrechte © MIT License Copyright (c) 2021 Lutz Tomala.<br/>
+        &copy; Copyright MIT License Copyright (c) 2021 Lutz Tomala.<br/>
   </p>
 </footer>
 </main>
