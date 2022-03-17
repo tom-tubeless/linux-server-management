@@ -10,4 +10,5 @@ openpyxl
 # cookiecutter
 # pytest
 black
+emoji
 sphinxcontrib-bibtex

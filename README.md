@@ -43,7 +43,7 @@ $ deactivate
 Enter the Environment and do the following:
 
 ```
-$ jupyter-book build book
+$ jupyter-book build --all book
 
 $ ghp-import -n -p -f book/_build/html
 ```

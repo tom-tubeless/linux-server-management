@@ -93,6 +93,7 @@ alt="Ping" width="800" border="10" /></a>
 5. Du möchtest nun die Webseite des _Webservers_ aufrufen. Öffne dazu den _Webbrowser_ deines _Clients_ und trage in die Adresszeile die _IP-Adresse_ des _Webservers_ ein (siehe Tabelle).
 6. Hat alles geklappt? Dann mache mit Übung 3 weiter.
 
+(content:uebung:3)=
 ### Übung 3
 
 Die Webseite gefällt dir nicht, deshalb möchtest du Änderungen daran vornehmen.
@@ -294,6 +295,33 @@ Alle Rechner, welche nun zusätzlich im Netzwerk 10.1.1.x angemeldet werden, sol
    2. *DHCP zur Konfiguration verwenden*
 
 > Starte die Simulation und schaue was bei den zwei neuen Clients passiert.
+
+
+## Filesharing
+### Übung 9
+Du möchtest mit deinen Freunden Dateien über ein Filesharing-Programm tauschen.
+
+#### Aktionsmodus
+1. Installiere auf den beiden Clients `10.1.1.20` und `10.1.1.21` die Programme *Gnutella*
+und *Datei-Explorer*.
+2. Importiere auf Client `1.1.1.20` eine kleine Datei wie z.B. `erde.jpg` in den Ordner `peer2peer`. Falls du dir unsicher bist, wie man Dateien importiert, lese einfach bei [Übung 3](content:uebung:3) nach.
+3. Starte *Gnutella“ auf den Clients `10.1.1.20` und `10.1.1.21`. Gebe als *Teilnehmer IP-Adresse* die IP-Adresse des jeweils anderen Clients an. Bestätige anschließend durch einen Klick auf *Netz beitreten*.
+4. Klicke in *Gnutella* von Client `10.1.1.21` auf *Suche*. Trage in die Suchmaske den gewünschten Datei-Namen ein (in unserem Beispiel *Erde*). Die Datei wird angezeigt und kann heruntergeladen werden.
+
+## Das Internet
+
+> Die bisherigen Aufgaben waren für dich ein Kinderspiel? Dann viel Spaß und Erfolg mit den weiteren Übungen. :skull: :skull: :skull:
+
+### Übung 10
+Nun möchtest du mehr als nur zwei Netze miteinander verbinden.
+Du darfst so viele Router einsetzen wie du möchtest, um ein vermaschtes Netz herzustellen
+Installiere auf einem Client die Software *Befehlszeile*.
+Überprüfe mit dem Befehl `ping` + entsprechende IP-Adresse ob die Verbindung zu anderen Clients besteht.
+
+#### Tipps
+* Aktiviere im *+Entwurfsmodus** bei allen *Routern* (Vermittlungsrechnern) *Automatisches Routing*.
+* Verwende für das dritte Netzwerk IP-Adressen im Bereich von z.B. `192.168.1.x`.
+* Die Anschlüsse von Router zu Router brauchen noch nicht vergebene IP-Adressen.
 
 
 ```{bibliography}
