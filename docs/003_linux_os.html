@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Linux-Server-Management &#8212; Linux Server Management</title>
+    <title>3. Was ist ein Betriebssystem &#8212; Linux Server Management</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -87,7 +87,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Das Internet" href="001_internet.html" />
+    <link rel="prev" title="2. Netzwerke" href="002_networking.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -125,13 +125,13 @@ const thebe_selector_output = ".output, .cell_output"
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="000_intro.html">
    Linux-Server-Management
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="001_internet.html">
    1. Das Internet
@@ -142,8 +142,8 @@ const thebe_selector_output = ".output, .cell_output"
    2. Netzwerke
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="003_linux_os.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    3. Was ist ein Betriebssystem
   </a>
  </li>
@@ -187,11 +187,11 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         <a class="dropdown-buttons"
-            href="../_sources/docs/000_intro.ipynb"><button type="button"
+            href="../_sources/docs/003_linux_os.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/000_intro.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/003_linux_os.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -211,7 +211,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/tom-tubeless/linux-server-management/issues/new?title=Issue%20on%20page%20%2Fdocs/000_intro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/tom-tubeless/linux-server-management/issues/new?title=Issue%20on%20page%20%2Fdocs/003_linux_os.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -232,7 +232,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/tom-tubeless/linux-server-management/main?urlpath=lab/tree/book/docs/000_intro.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/tom-tubeless/linux-server-management/main?urlpath=lab/tree/book/docs/003_linux_os.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -252,6 +252,41 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   3. Was ist ein Betriebssystem
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linux-philosophie">
+   4. Linux Philosophie
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#einleitung">
+     4.1. Einleitung
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linux-distributionen">
+     4.2. Linux Distributionen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grundlagen-des-linux-betriebssystems">
+   5. Grundlagen des Linux-Betriebssystems
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -259,22 +294,112 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Linux-Server-Management</h1>
+                <h1>Was ist ein Betriebssystem</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   3. Was ist ein Betriebssystem
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linux-philosophie">
+   4. Linux Philosophie
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#einleitung">
+     4.1. Einleitung
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linux-distributionen">
+     4.2. Linux Distributionen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grundlagen-des-linux-betriebssystems">
+   5. Grundlagen des Linux-Betriebssystems
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="linux-server-management">
-<h1>Linux-Server-Management<a class="headerlink" href="#linux-server-management" title="Permalink to this headline">¶</a></h1>
-<p>Unterrichtsplanung, -inhalte und -materialien für Linux-Server-Management am Wim-Wenders-Gymnasium Düsseldorf.</p>
-<div class="toctree-wrapper compound">
+  <div class="tex2jax_ignore mathjax_ignore section" id="was-ist-ein-betriebssystem">
+<h1><span class="section-number">3. </span>Was ist ein Betriebssystem<a class="headerlink" href="#was-ist-ein-betriebssystem" title="Permalink to this headline">¶</a></h1>
+<p>Das Betriebssystem eines Computers ist eine Sammlung von Computerprogrammen, die die Systemressourcen eines Computers (z.B. Arbeitsspeicher, Festplatten, etc) verwaltet. Gut erklärt wird das im Video: <a class="reference external" href="https://www.youtube.com/watch?v=oFlk_m-7sfQ">Was ist ein Betriebssystem? Computer &amp; IT-Wissen einfach erklärt</a>.</p>
 </div>
+<div class="tex2jax_ignore mathjax_ignore section" id="linux-philosophie">
+<h1><span class="section-number">4. </span>Linux Philosophie<a class="headerlink" href="#linux-philosophie" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="einleitung">
+<h2><span class="section-number">4.1. </span>Einleitung<a class="headerlink" href="#einleitung" title="Permalink to this headline">¶</a></h2>
+<p>In den Anfängen von Linux war die Installation ein mühsamer Prozess, der das Herunterladen von Dutzenden vo Disketten (über langsame Telefonleitungen) herunterzuladen und eine nach der anderen zu laden.
+Schließlich entwickelten die Hersteller/Distributoren CD-basierte Installationen, die weitaus benutzerfreundlicher waren, und als der Umfang der Installation allmählich erweitert wurde, setzten sich auch DVD-basierte Methoden durch.
+Die frühen Installationsprogramme boten eine Vielzahl von Konfigurationsmöglichkeiten, insbesondere in Bezug auf:</p>
+<ul class="simple">
+<li><p>Desktop-Manager: (in der Regel GNOME oder KDE), der das Aussehen des Desktops steuert</p></li>
+<li><p>Software-Auswahl: Im Gegensatz zu den Anbietern anderer Betriebssysteme bieten die Linux-Distributoren nicht nur das grundlegende Betriebssystem und Dienstprogramme, sondern eine breite Palette von Anwendungen und Dienstprogrammen. Bei anderen Betriebssystemen müssen die Äquivalente separat installiert werden (nach der Grundinstallation des Systems), nachdem sie heruntergeladen und/oder aus einer Vielzahl von Quellen erworben werden. Die meisten Linux-Benutzer stellen die gesamte Software, die häufig gebraucht wird, im Paketsystem der Distribution frei zur Verfügung.</p></li>
+</ul>
+<p>Die meisten Distributionen beschränken die Anzahl der Auswahlmöglichkeiten, die während der Installation getroffen werden müssen, auf eine kleine Anzahl grundlegender Fragen; die Standardantworten sind die, die am häufigsten nützlich sind. Normalerweise müssen nicht mehr als ein paar offensichtliche Fragen während der Installation beantwortet werden, die recht schnell vonstatten geht. Eine detailliertere Software-Auswahl kann nach der Installation mit Hilfe verschiedener grafischer Paketverwaltungssysteme getroffen werden.</p>
+</div>
+<div class="section" id="linux-distributionen">
+<h2><span class="section-number">4.2. </span>Linux Distributionen<a class="headerlink" href="#linux-distributionen" title="Permalink to this headline">¶</a></h2>
+<p>Der Begriff Linux mag für verschiedene Leute unterschiedliche Bedeutungen haben, aber im engeren Sinne bezieht er sich nur auf den Betriebssystem-Kernel: das Basisprogramm, das allem anderen zugrunde liegt, das mit der Hardware (wie CPU, Speicher und angeschlossene Geräte) und die Anwendungen, die auf dem Computer laufen.
+Alles andere auf Ihrem Computer (einschließlich der gesamten Software, die Sie für eine schöne grafische Oberfläche benötigen) stellt das vollständige Betriebssystem, zu dem viele Anwendungen hinzugefügt werden.
+Wenn die Leute den lose definierten Begriff Linux-System verwenden, sollten sie eigentlich Linux-basiertes System sagen.
+Es ist eine Menge Arbeit, all die anderen Komponenten zusammenzustellen, die über dem Linux-Kernel liegen (Anwendungen, Bibliotheken, grafische Umgebungen usw.), und es ist die Aufgabe einer Linux-Distribution, all diese Komponenten in eine eine saubere und aktualisierbare Einheit zu integrieren, aus der die Benutzer Nutzen ziehen können.
+Es gibt viele verschiedene Linux-Distributionen (manchmal auch Distros genannt).
+Es wäre zwar einfacher, eine vorzugeben und dementsprechend Anweisungen zu geben aber:</p>
+<ul class="simple">
+<li><p>Du solltst verstehen, was global für alle Linux-Systeme gilt und was nur für eine bestimmte Familie von Distributionen gilt.</p></li>
+<li><p>Die <a class="reference external" href="https://www.linuxfoundation.org/">Linux Foundation</a> unterstützt oder fördert keine bestimmte Distribution, sondern die Gemeinschaft als Ganzes.</p></li>
+</ul>
+<p>Daher werden hier die folgendenen Distributionsfamilien vorgestellt:</p>
+<ul class="simple">
+<li><p>Red Hat: Einschließlich Fedora, Red Hat Enterprise Linux (RHEL) und CentOS.</p></li>
+<li><p>Debian: Einschließlich Debian, Ubuntu und Linux Mint.</p></li>
+<li><p>SUSE: Einschließlich SUSE und openSUSE.</p></li>
+</ul>
+<p>Was die Mitglieder einer bestimmten Familie eint, ist vor allem die Methode der Software-Paketierung, Installation und Aktualisierung der Software.
+Relativ unerfahrene Benutzer werden sich mit Ubuntu oder Linux Mint am leichtesten zurechtfinden, während diejenigen, die mit leistungsfähigere Hardware oder sogenannte Enterprise-Systeme gewohnt sind, werden CentOS oder openSUSE am leichtesten begreifen.
+Schau dich ruhig selber um um der buntern Linux-Welt; zum Beispiel auf <a class="reference external" href="https://distrowatch.com/">Distrowatch</a> oder <a class="reference external" href="https://static.lwn.net/Distributions/">LWN</a>.</p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="grundlagen-des-linux-betriebssystems">
+<h1><span class="section-number">5. </span>Grundlagen des Linux-Betriebssystems<a class="headerlink" href="#grundlagen-des-linux-betriebssystems" title="Permalink to this headline">¶</a></h1>
+<p id="id1"><dl class="citation">
+<dt class="label" id="id5"><span class="brackets">1</span></dt>
+<dd><p>Timothy B. Lee. The internet, explained. <a class="reference external" href="https://www.vox.com/2014/6/16/18076282/the-internet">https://www.vox.com/2014/6/16/18076282/the-internet</a>, 2015. Accessed: 2021-09-14.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets">2</span></dt>
+<dd><p>W3Schools. Html images. <a class="reference external" href="https://www.w3schools.com/html/html_images.asp">https://www.w3schools.com/html/html_images.asp</a>, 2022. Accessed: 2022-01-21.</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets">3</span></dt>
+<dd><p>Wikipedia. Wikipedia: alan turing. <a class="reference external" href="https://de.wikipedia.org/wiki/Alan_Turing">https://de.wikipedia.org/wiki/Alan_Turing</a>, 2022. Accessed: 2022-01-21.</p>
+</dd>
+<dt class="label" id="id2"><span class="brackets">4</span></dt>
+<dd><p>Wikipedia. Wikipedia: grace hopper. <a class="reference external" href="https://de.wikipedia.org/wiki/Grace_Hopper">https://de.wikipedia.org/wiki/Grace_Hopper</a>, 2022. Accessed: 2022-01-21.</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets">5</span></dt>
+<dd><p>Wikipedia. Wikipedia: mailserver. <a class="reference external" href="https://de.wikipedia.org/wiki/Mailserver">https://de.wikipedia.org/wiki/Mailserver</a>, 2022. Accessed: 2022-01-22.</p>
+</dd>
+</dl>
+</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -301,13 +426,13 @@ const thebe_selector_output = ".output, .cell_output"
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="001_internet.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Das Internet</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="002_networking.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>Netzwerke</p>
+        </div>
     </a>
 </div>
             
